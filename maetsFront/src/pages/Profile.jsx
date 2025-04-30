@@ -1,9 +1,10 @@
 import React from "react";
+import "../App.css";
 
-const Profile = () => {
+const Profile = (props) => {
   return (
-    <div className="bg-black">
-      <h1>Profile</h1>
+    <div className="container">
+      <img src={props.Logo} alt="" />
     </div>
   );
 };
