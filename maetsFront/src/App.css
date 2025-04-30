@@ -1,10 +1,46 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
 
 body {
-  font-family: "Inter", sans-serif;
-  background-color: #111;
+  font-family: "Inter", sans-serif !important;
+  background-color: #111 !important;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  color: #fff;
+  box-sizing: border-box !important;
+  color: #fff !important;
 }
+
+.Login{
+  background-color: #202127 !important;
+  width: 100vh !important;
+}
+
+.SignIn{
+  width: 230px !important;
+  height: 50px !important;
+  font-size: 20px !important;
+  background-color: #401BE4 !important;
+}
+
+.footinho{
+  font-size: 13px !important;
+  color: #A4A4A4 !important;
+}
+
+.Info{
+  background-color: #7F7F7F!important;
+  border: none !important;
+  color: #fff !important;
+  height: 45px;
+}
+
+.cheks{
+  background-color: #7F7F7F!important;
+}
+.Centro{
+  height: 100vh !important;
+}
+.labelo label{
+  font-size: 15px !important;
+}
+
+
