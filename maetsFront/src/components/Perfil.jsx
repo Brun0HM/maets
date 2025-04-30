@@ -4,7 +4,7 @@ const Perfil = (props) => {
   return (
     <div className="perfil">
       <img className="mt-4 mb-4 ms-4" src={props.Logo} alt="" />
-      <div className="d-flex container border-0 rounded-3 conteudo">
+      <div className="d-flex conteudo p-5 container border-0 rounded-3 rounded-bottom-0">
         <img className="rounded-3 m-3" src={props.Profile} alt="" />
         <div className="profile d-flex flex-column justify-content-center">
           <h1 className="marginha fw-semibold">Leon Martins</h1>
@@ -20,6 +20,7 @@ const Perfil = (props) => {
           </div>
         </div>
       </div>
+      <h1 className="conteudo container pb-1">Favorite Games</h1>
     </div>
   );
 };

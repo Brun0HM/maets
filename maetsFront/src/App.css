@@ -31,9 +31,24 @@ body {
   .perfil {
     width: 90% !important;
     margin: 0 auto !important;
+    max-width: 373px !important;
+  }
+  .mobile {
+    display: flex !important;
+    flex-direction: column !important;
   }
 }
 
-.tamanho {
-  max-width: 120px !important;
+img.responsiva {
+  width: 211px;
+  height: 140px;
+  object-fit: cover; /* Evita distorções */
+}
+
+@media (max-width: 768px) {
+  img.responsiva {
+    width: 180px;
+    height: 210px;
+    object-fit: cover; /* Evita distorções */
+  }
 }
