@@ -2,9 +2,9 @@ import React from "react";
 
 const Perfil = (props) => {
   return (
-    <div>
-      <img className="mt-4 ms-4" src={props.Logo} alt="" />
-      <div className="d-flex border-0 rounded-3 conteudo">
+    <div className="perfil">
+      <img className="mt-4 mb-4 ms-4" src={props.Logo} alt="" />
+      <div className="d-flex container border-0 rounded-3 conteudo">
         <img className="rounded-3 m-3" src={props.Profile} alt="" />
         <div className="profile d-flex flex-column justify-content-center">
           <h1 className="marginha fw-semibold">Leon Martins</h1>
@@ -12,8 +12,8 @@ const Perfil = (props) => {
             <p className="">Edit Profile</p>
             <i className="bi bi-caret-right-fill"></i>
           </div>
-          <div className="text-dark d-flex justify-content-center align-items-center rounded-4 level gap-2">
-            <span className="border border-2 border-black rounded-circle p-1">
+          <div className="text-dark d-flex align-items-center rounded-4 tamanho mb-2 level gap-2">
+            <span className="m-2 border border-2 border-black rounded-circle">
               35
             </span>
             <span className="">Colector</span>

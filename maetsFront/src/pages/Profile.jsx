@@ -7,9 +7,9 @@ import profile from "../assets/Profile.png";
 
 const Profile = () => {
   return (
-    <div className="container">
+    <div className="">
       <Perfil Logo={logo} Profile={profile} />
-      <FavGames />
+      {/* <FavGames /> */}
     </div>
   );
 };
