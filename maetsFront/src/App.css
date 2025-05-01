@@ -47,8 +47,9 @@ img.responsiva {
 
 @media (max-width: 768px) {
   img.responsiva {
-    width: 280px;
+    width: 180px;
     height: 210px;
     object-fit: cover; /* Evita distorções */
   }
 }
+

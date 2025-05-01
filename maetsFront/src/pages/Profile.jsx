@@ -7,18 +7,36 @@ import profile from "../assets/Profile.png";
 import cyberpunk from "../assets/banner.png";
 import hogwarts from "../assets/hogwarts.webp";
 import eldenRing from "../assets/eldenring.avif";
+import AllGames from "../components/AllGames";
+import rdr2 from "../assets/rdr2.jpg";
 
 const Profile = () => {
   return (
     <div className="">
       <Perfil Logo={logo} Profile={profile} />
-      <div className="conteudo container rounded-3">
-        <h1 className="fw-bold d-flex justify-content-center pt-3">
-          Favorite Games
-        </h1>
-        <FavGames Banner={cyberpunk} titulo={"Cyberpunk"} genero={"RPG"} />
-        <FavGames Banner={hogwarts} titulo={"Hogwarts Legacy"} genero={"RPG"} />
-        <FavGames Banner={eldenRing} titulo={"Elden Ring"} genero={"Ação"} />
+
+      <div className="d-flex m-5 gap-2 row">
+        <div className="conteudo container rounded-3 col-12 col-md-6 order-2 order-md-1">
+          <h1 className="fw-bold d-flex justify-content-center pt-3">
+            Favorite Games
+          </h1>
+          <FavGames Banner={cyberpunk} titulo={"Cyberpunk"} genero={"RPG"} />
+          <FavGames
+            Banner={hogwarts}
+            titulo={"Hogwarts Legacy"}
+            genero={"RPG"}
+          />
+          <FavGames Banner={eldenRing} titulo={"Elden Ring"} genero={"Ação"} />
+        </div>
+        <div className="conteudo container w-auto rounded-3 col-12 col-md-6 order-2 order-md-1">
+          <h1 className="fw-bold d-flex justify-content-center pt-3">
+            All Games
+          </h1>
+          <AllGames Banner={cyberpunk} />
+          <AllGames Banner={hogwarts} />
+          <AllGames Banner={eldenRing} />
+          <AllGames Banner={rdr2} />
+        </div>
       </div>
     </div>
   );
