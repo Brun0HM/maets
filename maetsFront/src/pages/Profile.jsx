@@ -12,7 +12,10 @@ const Profile = () => {
   return (
     <div className="">
       <Perfil Logo={logo} Profile={profile} />
-      <div>
+      <div className="conteudo container rounded-3">
+        <h1 className="fw-bold d-flex justify-content-center pt-3">
+          Favorite Games
+        </h1>
         <FavGames Banner={cyberpunk} titulo={"Cyberpunk"} genero={"RPG"} />
         <FavGames Banner={hogwarts} titulo={"Hogwarts Legacy"} genero={"RPG"} />
         <FavGames Banner={eldenRing} titulo={"Elden Ring"} genero={"Ação"} />
