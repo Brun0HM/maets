@@ -47,9 +47,17 @@ img.responsiva {
 
 @media (max-width: 768px) {
   img.responsiva {
-    width: 180px;
-    height: 210px;
-    object-fit: cover; /* Evita distorções */
+    width: 200px;
+    height: 130px;
   }
 }
 
+.alinha {
+  margin-right: -150px !important;
+}
+
+@media (max-width: 768px) {
+  .alinha {
+    margin-right: 0px !important;
+  }
+}

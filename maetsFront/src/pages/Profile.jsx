@@ -10,16 +10,17 @@ import eldenRing from "../assets/eldenring.avif";
 import AllGames from "../components/AllGames";
 import rdr2 from "../assets/rdr2.jpg";
 
-const Profile = () => {
+const Profile = (props) => {
   return (
-    <div className="">
-      <Perfil Logo={logo} Profile={profile} />
+    <div className=" ">
+      <img className="mt-4 mb-4 ms-4" src={props.Logo} alt="" />
+      <div className="container ">
+        <Perfil Logo={logo} Profile={profile} />
+      </div>
 
-      <div className="d-flex m-5 gap-2 row">
-        <div className="conteudo container rounded-3 col-12 col-md-6 order-2 order-md-1">
-          <h1 className="fw-bold d-flex justify-content-center pt-3">
-            Favorite Games
-          </h1>
+      <div className="d-flex ms-4 me-5 row">
+        <div className="conteudo ms-md-auto ms-2 rounded-3 col-12 col-md-6 container-md alinha">
+          <h1 className="fw-bold pt-3">Favorite Games</h1>
           <FavGames Banner={cyberpunk} titulo={"Cyberpunk"} genero={"RPG"} />
           <FavGames
             Banner={hogwarts}
@@ -28,7 +29,7 @@ const Profile = () => {
           />
           <FavGames Banner={eldenRing} titulo={"Elden Ring"} genero={"Ação"} />
         </div>
-        <div className="conteudo container w-auto rounded-3 col-12 col-md-6 order-2 order-md-1">
+        <div className="conteudo container w-auto rounded-3 col-12 col-md-6 mt-3 mt-md-0">
           <h1 className="fw-bold d-flex justify-content-center pt-3">
             All Games
           </h1>
