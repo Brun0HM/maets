@@ -2,7 +2,6 @@ import React from "react";
 import "../App.css";
 import Perfil from "../components/Perfil";
 import FavGames from "../components/FavGames";
-import logo from "../assets/logo.png";
 import profile from "../assets/Profile.png";
 import cyberpunk from "../assets/banner.png";
 import hogwarts from "../assets/hogwarts.webp";
@@ -14,7 +13,7 @@ const Profile = (props) => {
   return (
     <div>
       <img className="m-4" src={props.Logo} alt="Logo Maets" />
-      <div className="container">
+      <div className="container d-flex align-items-start mb-5 ps-4 pb-5">
         <Perfil Profile={profile} />
       </div>
 
