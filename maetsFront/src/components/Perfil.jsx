@@ -2,13 +2,9 @@ import React from "react";
 
 const Perfil = (props) => {
   return (
-    <div className="perfil">
+    <div>
       <div className="container d-flex justify-content-center align-items-center">
-        <img
-          className="rounded-3 m-3"
-          src={props.Profile}
-          alt=""
-        />
+        <img className="rounded-3 m-3" src={props.Profile} alt="" />
         <div className="profile d-flex flex-column justify-content-center">
           <h1 className="marginha fw-semibold">Leon Martins</h1>
           <div className="d-flex">

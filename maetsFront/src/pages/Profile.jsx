@@ -12,14 +12,14 @@ import rdr2 from "../assets/rdr2.jpg";
 
 const Profile = (props) => {
   return (
-    <div className=" ">
-      <img className="mt-4 mb-4 ms-4" src={props.Logo} alt="" />
-      <div className="container ">
-        <Perfil Logo={logo} Profile={profile} />
+    <div>
+      <img className="m-4" src={props.Logo} alt="Logo Maets" />
+      <div className="container">
+        <Perfil Profile={profile} />
       </div>
 
-      <div className="d-flex ms-4 me-5 row">
-        <div className="conteudo ms-md-auto ms-2 rounded-3 col-12 col-md-6 container-md alinha">
+      <div className="d-flex ms-4 me-4 row">
+        <div className="conteudo rounded-3 col-12 col-md-6 container-md alinha">
           <h1 className="fw-bold pt-3">Favorite Games</h1>
           <FavGames Banner={cyberpunk} titulo={"Cyberpunk"} genero={"RPG"} />
           <FavGames
