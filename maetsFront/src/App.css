@@ -61,3 +61,7 @@ img.responsiva {
     margin-right: 0px !important;
   }
 }
+
+.Destaque {
+  background: linear-gradient(135deg, #401BE4 0%, #1F1060 100%);
+}
