@@ -4,7 +4,7 @@ import Perfil from "../components/Perfil";
 import FavGames from "../components/FavGames";
 import profile from "../assets/Profile.png";
 import cyberpunk from "../assets/Banner.png";
-import hogwarts from "../assets/hogwarts.webp";
+import hogwarts from "../assets/Hogwarts.webp";
 import eldenRing from "../assets/eldenring.avif";
 import AllGames from "../components/AllGames";
 import rdr2 from "../assets/rdr2.jpg";
