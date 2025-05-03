@@ -3,7 +3,7 @@ import "../App.css";
 import Perfil from "../components/Perfil";
 import FavGames from "../components/FavGames";
 import profile from "../assets/Profile.png";
-import cyberpunk from "../assets/banner.png";
+import cyberpunk from "../assets/Banner.png";
 import hogwarts from "../assets/hogwarts.webp";
 import eldenRing from "../assets/eldenring.avif";
 import AllGames from "../components/AllGames";
