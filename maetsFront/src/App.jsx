@@ -1,6 +1,6 @@
 import React from "react";
 import Profile from "./pages/Profile";
-import logo from "./assets/logo.png";
+// import logo from "./assets/logo.png";
 import Home from "./pages/Home";
 
 const App = () => {
