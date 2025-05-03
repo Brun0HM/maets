@@ -17,6 +17,8 @@ const Home = () => {
         Banner={banner}
         fotinha={fotinha}
       />
+      <hr className="container" />
+      
     </div>
   );
 };
