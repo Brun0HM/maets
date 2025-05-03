@@ -3,8 +3,8 @@ import React from "react";
 const Sumary = (props) => {
   return (
     <div className="row">
-      <div className="conteudo p-3 rounded-3">
-        <h2 className="text-start">Itens</h2>
+      <div className="conteudo p-4 rounded-3">
+        <h2 className="text-start ms-2 fs-3 fw-medium">Itens</h2>
         <div className="container d-flex flex-column align-items-center">
           <div className="d-flex justify-content-between gap-3 w-100">
             <h4 className="fs-5">{props.jogo}</h4>
