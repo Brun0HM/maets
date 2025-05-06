@@ -1,14 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
 
 body {
-
   font-family: "Inter", sans-serif !important;
   background-color: #111 !important;
-  margin: 0 !important;
-  padding: 0 !important;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box !important;
   color: #fff !important;
-
 }
 
 .conteudo {
@@ -107,16 +105,6 @@ img.responsiva {
 
 .conteudo {
   background-color: #252525 !important;
-
-}
-
-.carrinho {
-  background-color: #24252A !important;
-}
-
-.profilesize {
-      width: 60px;
-      height: 60px;
 }
 
 .inputTamanho {
@@ -127,7 +115,8 @@ img.responsiva {
   background: #401be4 !important;
 }
 
-
+<<<<<<< HEAD
+=======
 .Login {
   background-color: #202127 !important;
   width: 100vh !important;
@@ -193,18 +182,14 @@ img.responsiva {
   width: 160px;
   height: 29.56px;
 }
-
-
+>>>>>>> 71a775b2795edca46cff121278d62ae3a687e32d
 .inputCredit {
   background: #3B3B3B !important;
   min-height: 45px;
 
 }
 
-.inputCredit::placeholder {
-  color: #7F7F7F !important;
-}
-
+<<<<<<< HEAD
 
 .inputCredit::placeholder {
   color: #7F7F7F !important;
@@ -219,3 +204,14 @@ img.responsiva {
   transition: color 0.3s ease-in-out;
 }
 
+
+=======
+.generoTabela {
+  color: #7c7c7c !important;
+}
+
+.generoTabela :hover {
+  color: #ffffff !important;
+  transition: color 0.3s ease-in-out;
+}
+>>>>>>> 71a775b2795edca46cff121278d62ae3a687e32d

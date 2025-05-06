@@ -1,8 +1,6 @@
 import React from "react";
 import "../App.css";
-import Perfil from "../components/Perfil";
 import FavGames from "../components/FavGames";
-import profile from "../assets/Profile.png";
 import cyberpunk from "../assets/Banner.png";
 import hogwarts from "../assets/Hogwarts.webp";
 import eldenRing from "../assets/eldenring.avif";
@@ -13,9 +11,7 @@ const Profile = (props) => {
   return (
     <div>
       <img className="m-4" src={props.Logo} alt="Logo Maets" />
-      <div className="container d-flex align-items-start mb-5 ps-4 pb-5">
-        <Perfil Profile={profile} />
-      </div>
+      <div className="container d-flex align-items-start mb-5 ps-4 pb-5"></div>
 
       <div className="d-flex ms-4 me-4 row">
         <div className="conteudo rounded-3 col-12 col-md-6 container-md alinha">

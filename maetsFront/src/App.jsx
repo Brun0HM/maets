@@ -1,19 +1,27 @@
 import React from "react";
 import Header from "./components/Header";
-import Logo from "./assets/logo.png";
-import Profile from "./assets/Profile.png";
+import logo from "./assets/logo.png";
+import perfito from "./assets/Profile.png";
+import "./App.css";
+import Login from "./pages/Login";
+import Modal from "./components/Modal";
 import Home from "./pages/Home";
 import Cart from "./pages/Cart";
 import Payment from "./pages/Payment";
 import Footer from "./components/Footer";
-import PayCard from "./components/PayCard";
-
+import Profile from "./pages/Profile";
+import DashBoard from "./pages/DashBoard";
+import TablesAdmin from "./components/TablesAdmin";
+import FormCupom from "./components/FormCupom";
+import FormGames from "./components/FormGames";
+import FormCate from "./components/FormCate";
 
 const App = () => {
   return (
     <div>
       <Payment />
     </div>
+
   );
 };
 
