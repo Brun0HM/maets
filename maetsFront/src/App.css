@@ -115,38 +115,37 @@ img.responsiva {
   background: #401be4 !important;
 }
 
-
-.Login{
+.Login {
   background-color: #202127 !important;
   width: 100vh !important;
 }
 
-.SignIn{
+.SignIn {
   width: 230px !important;
   height: 50px !important;
   font-size: 20px !important;
-  background-color: #401BE4 !important;
+  background-color: #401be4 !important;
 }
 
-.footinho{
+.footinho {
   font-size: 13px !important;
-  color: #A4A4A4 !important;
+  color: #a4a4a4 !important;
 }
 
-.Info{
-  background-color: #7F7F7F!important;
+.Info {
+  background-color: #7f7f7f !important;
   border: none !important;
   color: #fff !important;
   height: 45px;
 }
 
-.cheks{
-  background-color: #7F7F7F!important;
+.cheks {
+  background-color: #7f7f7f !important;
 }
-.Centro{
+.Centro {
   height: 100vh !important;
 }
-.labelo label{
+.labelo label {
   font-size: 15px !important;
 }
 @media (max-width: 900px) {
@@ -172,5 +171,3 @@ img.responsiva {
 .BtnTamanho {
   font-size: 1rem;
 }
-
-
