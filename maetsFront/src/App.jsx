@@ -11,9 +11,6 @@ const App = () => {
   return (
     <div>
       <Modal/>
-      {/* <Profile Logo={logo} />
-      <Home /> */}
-      <Cart />
     </div>
   );
 };
