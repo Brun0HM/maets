@@ -16,7 +16,7 @@ import FormCupom from "./components/FormCupom";
 
 const App = () => {
   return (
-    <div className="">
+    <div>
       <Header Logo={logo} Profile={perfito} />
       <TablesAdmin />
       <FormCupom />
