@@ -7,6 +7,111 @@ body {
   padding: 0;
   box-sizing: border-box !important;
   color: #fff !important;
+  font-family: "Inter", sans-serif !important;
+  background-color: #111 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+  color: #fff !important;
+  /* user-select: none !important; */
+}
+
+.conteudo {
+  background-color: #252525 !important;
+}
+
+.level {
+  background-color: #fff !important;
+  opacity: 0.3;
+}
+
+.favGamesFundo {
+  background-color: #2f2f2f !important;
+}
+
+.genero {
+  color: #7c7c7c;
+}
+
+@media (max-width: 900px) {
+  .perfil {
+    width: 90% !important;
+    margin: 0 auto !important;
+    max-width: 373px !important;
+  }
+  .mobile {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+}
+
+img.responsiva {
+  width: 211px;
+  height: 140px;
+  object-fit: cover; /* Evita distorções */
+}
+
+@media (max-width: 768px) {
+  img.responsiva {
+    width: 200px;
+    height: 130px;
+  }
+}
+
+.alinha {
+  margin-right: -300px !important;
+}
+
+@media (max-width: 768px) {
+  .alinha {
+    margin-right: 0px !important;
+  }
+}
+
+.Destaque {
+  background: linear-gradient(135deg, #401be4 0%, #1f1060 100%);
+}
+
+/* Imagem grande */
+.banner-grande {
+  width: 530px !important;
+  height: 280px !important;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .banner-grande {
+    width: 100% !important;
+    height: 190px !important;
+  }
+}
+
+.banner-pequeno {
+  width: 175px !important;
+  height: 280px !important;
+  object-fit: cover;
+}
+
+/* Container de rolagem horizontal para mobile */
+.carrossel-scroll {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+.carrossel-scroll::-webkit-scrollbar {
+  height: 8px;
+}
+
+.carrossel-scroll::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+
+.btnCor {
+  background: #401be4 !important;
 }
 
 .Login{
