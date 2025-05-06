@@ -1,48 +1,72 @@
 import React from "react";
-import "../App.css";
-
+import "../app.css";
 const Header = (props) => {
   return (
-    <>
-      <div className="d-flex justify-content-between align-items-center px-4 pt-4">
-        {/* Logo e Pesquisar */}
-        <div className="d-flex align-items-center gap-3">
-          {/* Logo */}
-          <img src={props.Logo} alt="Logo" />
+    <nav className="navbar navbar-expand-lg px-4">
+      <div className="container-fluid">
+        {/* Logo */}
+        <a className="navbar-brand d-flex align-items-center pe-4" href="#">
+          <img src={props.Logo} alt="Logo" height="40" />
+        </a>
 
-          {/* Pesquisar */}
-          <div className="d-flex">
-            <input
-              className="form-control border-0 carrinho text-light inputTamanho align-items-center justify-content-center rounded-end-0"
-              placeholder="Search..."
-              type="text"
-            />
-            <i className="bi bi-search text-light btn carrinho rounded-start-0"></i>
+        {/* Botão de colapso para dispositivos menores */}
+        <button
+          className="navbar-toggler bg-white"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarContent"
+          aria-controls="navbarContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+
+        {/* Conteúdo da Navbar */}
+        <div className="collapse navbar-collapse" id="navbarContent">
+          <div className="d-flex flex-column flex-lg-row flex-grow-1 align-items-center gap-3">
+            {/* Campo de Pesquisa */}
+            <div className="input-group mt-2 row">
+              <input
+                className="border-0 rounded-2 conteudo text-light col-10 col-md-5 align-items-center justify-content-center rounded-end-0"
+                placeholder="Search..."
+                type="text"
+              />
+              <i className="bi bi-search btn conteudo text-light col-2 col-md-1 text-end"></i>
+            </div>
           </div>
-        </div>
 
-        {/* Perfil Nome e See Profile */}
-        <div className="d-flex align-items-center gap-3">
-          <div className="text-end">
-            <h1 className="text-light fw-bold mb-0 fs-4">Leon Martins</h1>
-            <h4 role="button" className="text-secondary mt-0 mb-2 fs-5">
-              <i className="bi bi-chevron-down me-2"></i>
-              See Profile
-            </h4>
+          {/* Perfil e Carrinho */}
+          <div className="d-flex flex-column flex-lg-row align-items-lg-center gap-4 mt-3 mt-lg-0">
+            <div className="d-flex align-items-center justify-content-between gap-2">
+              {/* Nome e botão de perfil */}
+              <div className="text-end">
+                <h1 className="text-light fw-bold mb-0 fs-5">Leon Martins</h1>
+                <i className="bi bi-chevron-down me-1"></i> See Profile
+              </div>
+
+              {/* Imagem do Perfil */}
+              <img
+                className="rounded-2"
+                width="60px"
+                height="60px"
+                src={props.Profile}
+                alt="profile"
+              />
+            </div>
+
+            {/* Ícone do Carrinho */}
+            <div className="row d-flex align-items-center justify-content-start">
+              <i
+                className="bi bi-cart3 text-light fs-4 btn d-flex align-items-center justify-content-center col-4 col-md-12 conteudo p-md-3"
+                width="60px"
+                height="60px"
+              ></i>
+            </div>
           </div>
-
-          {/* Perfil Imagem */}
-          <img
-            className="rounded-2 profilesize"
-            src={props.Profile}
-            alt="profile"
-          />
-
-          {/* Carrinho */}
-          <i className="bi bi-cart3 text-light fs-4 profilesize btn carrinho d-flex align-items-center justify-content-center"></i>
         </div>
       </div>
-    </>
+    </nav>
   );
 };
 

@@ -9,13 +9,12 @@ import Footer from "./components/Footer";
 
 const App = () => {
   return (
-    <div>
-
-      <Header Logo={logo} Profile={profile}/>
+    <div className="">
+      <Header Logo={logo} Profile={profile} />
       {/* <Profile Logo={logo} />
       <Home /> */}
       <Payment />
-      < Footer Logo={logo} />
+      {/* < Footer Logo={logo} /> */}
     </div>
   );
 };
