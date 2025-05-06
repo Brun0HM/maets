@@ -12,7 +12,6 @@ import cyberpunk from "../assets/Banner.png";
 const Home = () => {
   return (
     <div>
-      <Header />
       <Destaque
         titulo={"JoJo's Bizarre Adventure: All-Star Battle R "}
         descricao={
