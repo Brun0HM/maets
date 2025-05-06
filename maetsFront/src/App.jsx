@@ -13,10 +13,8 @@ import FormCupom from "./components/FormCupom";
 
 const App = () => {
   return (
-    <div>
-
-    <FormCupom/>
     <div className="">
+      <FormCupom />
       <Header Logo={logo} Profile={profile} />
       {/* <Profile Logo={logo} />
       <Home /> */}
