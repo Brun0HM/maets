@@ -127,3 +127,13 @@ img.responsiva {
   background: #401be4 !important;
 }
 
+.inputCredit {
+  background: #3B3B3B !important;
+  min-height: 45px;
+
+}
+
+
+.inputCredit::placeholder {
+  color: #7F7F7F !important;
+}
