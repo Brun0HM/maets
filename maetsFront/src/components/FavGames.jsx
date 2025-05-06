@@ -2,13 +2,13 @@ import React from "react";
 
 const FavGames = (props) => {
   return (
-    <div className="d-flex conteudo p-1 container rounded-3 rounded-bottom-0">
-      <div className="favGamesFundo w-50 pt-2 rounded-3 container perfil mt-3">
-        <div className="mobile d-flex p-3">
-          <img className="rounded-1 responsiva" src={props.Banner} alt="" />
-          <div className="ms-3 mt-2">
+    <div className="d-flex rounded-bottom-3 conteudo  container">
+      <div className="favGamesFundo pt-2  rounded-3 container perfil mt-3 mb-3">
+        <div className="mobile d-flex start-0 p-3">
+          <img className="rounded responsiva " src={props.Banner} alt="" />
+          <div className=" ms-0 ms-md-2 mt-2">
             <h1 className="fw-semibold fs-3">{props.titulo}</h1>
-            <span className="genero">{props.genero}</span>
+            <span className="genero me-3 me-md-0">{props.genero}</span>
           </div>
         </div>
       </div>
