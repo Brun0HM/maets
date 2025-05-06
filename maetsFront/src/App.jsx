@@ -8,6 +8,7 @@ import Payment from "./pages/Payment";
 import Footer from "./components/Footer";
 import PayCard from "./components/PayCard";
 
+
 const App = () => {
   return (
     <div>
