@@ -7,8 +7,8 @@ import Cart from "./pages/Cart";
 const App = () => {
   return (
     <div>
-      {/* <Profile Logo={logo} />
-      <Home /> */}
+      <Profile Logo={logo} />
+      <Home /> 
       <Cart />
     </div>
   );
