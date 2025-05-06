@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
 
 body {
-
   font-family: "Inter", sans-serif !important;
   background-color: #111 !important;
   margin: 0;
@@ -106,16 +105,6 @@ img.responsiva {
 
 .conteudo {
   background-color: #252525 !important;
-
-}
-
-.carrinho {
-  background-color: #24252A !important;
-}
-
-.profilesize {
-      width: 60px;
-      height: 60px;
 }
 
 .inputTamanho {

@@ -16,6 +16,12 @@ const App = () => {
     <div>
 
     <FormCupom/>
+    <div className="">
+      <Header Logo={logo} Profile={profile} />
+      {/* <Profile Logo={logo} />
+      <Home /> */}
+      <Payment />
+      {/* < Footer Logo={logo} /> */}
     </div>
   );
 };
