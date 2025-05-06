@@ -153,21 +153,22 @@ img.responsiva {
     margin: 0 auto !important;
   }
 }
-.Modal{
-  background-color: #202127  !important;
-  
-}
-.GameInfo {
-  width: 320px; /* Define a largura igual à largura da imagem */
-}
-.CartName label{
-  font-size: 15px !important;
-  color: #A4A4A4 !important;
-}
-.Cartinho{
-  background-color: #2D2D2D!important;
-  width: 800px !important;
+.Modal {
+  background-color: #202127 !important;
+  max-width: 996px;
 }
 
+.Fts img {
+  max-width: 115px;
+  height: auto;
+}
+
+.GameInfo {
+  max-width: 99%;
+}
+
+.BtnTamanho {
+  font-size: 1rem;
+}
 
 
