@@ -113,6 +113,92 @@ img.responsiva {
 }
 
 
+.Login {
+  background-color: #202127 !important;
+  width: 100vh !important;
+}
+
+.SignIn {
+  width: 230px !important;
+  height: 50px !important;
+  font-size: 20px !important;
+  background-color: #401be4 !important;
+}
+
+.footinho {
+  font-size: 13px !important;
+  color: #a4a4a4 !important;
+}
+
+.Info {
+  background-color: #7f7f7f !important;
+  border: none !important;
+  color: #fff !important;
+  height: 45px;
+}
+
+.cheks {
+  background-color: #7f7f7f !important;
+}
+.Centro {
+  height: 100vh !important;
+}
+.labelo label {
+  font-size: 15px !important;
+}
+@media (max-width: 900px) {
+  .Login {
+    width: 90% !important;
+    margin: 0 auto !important;
+  }
+}
+
+.Modal {
+  background-color: #202127 !important;
+  max-width: 996px;
+}
+.FundoForm{
+  background-color: #202127 !important;
+
+}
+
+.Fts img {
+  max-width: 115px;
+  height: auto;
+}
+
+.GameInfo {
+  max-width: 99%;
+}
+
+.BtnTamanho {
+  font-size: 1rem;
+}
+.Juntinhos input{ 
+  width: 160px;
+  height: 29.56px;
+}
+.inputCredit {
+  background: #3B3B3B !important;
+  min-height: 45px;
+
+}
+
+
+.inputCredit::placeholder {
+  color: #7F7F7F !important;
+}
+
+.generoTabela {
+  color: #7c7c7c !important;
+}
+
+.generoTabela :hover {
+  color: #ffffff !important;
+  transition: color 0.3s ease-in-out;
+}
+
+
 .generoTabela {
   color: #7c7c7c !important;
 }

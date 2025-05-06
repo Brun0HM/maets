@@ -23,6 +23,7 @@ const App = () => {
   return (
     <div>
       <Cart />
+      <Payment />
     </div>
   );
 };
