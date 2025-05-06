@@ -9,15 +9,13 @@ import Home from "./pages/Home";
 import Cart from "./pages/Cart";
 import Payment from "./pages/Payment";
 import Footer from "./components/Footer";
+import FormCupom from "./components/FormCupom";
 
 const App = () => {
   return (
     <div>
 
-      <Header Logo={logo} Profile={profile}/>
-      {/* <Profile Logo={logo} />
-      <Home /> */}
-      < Footer Logo={logo} />
+    <FormCupom/>
     </div>
   );
 };
