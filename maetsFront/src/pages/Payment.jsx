@@ -9,8 +9,6 @@ import RegisterCard from '../components/RegisterCard'
 import RegisteredCards from '../components/RegisteredCards'
 
 const Payment = () => {
-
-  
   return (
     <>
       <Header Logo={logo} Profile={perfito}/>
