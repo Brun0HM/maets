@@ -10,17 +10,15 @@ import Cart from "./pages/Cart";
 import Payment from "./pages/Payment";
 import Footer from "./components/Footer";
 import FormCupom from "./components/FormCupom";
+import FormGames from "./components/FormGames";
+import FormCate from "./components/FormCate";
 
 const App = () => {
   return (
     <div className="">
-      <FormCupom />
-      <Header Logo={logo} Profile={profile} />
-      {/* <Profile Logo={logo} />
-      <Home /> */}
-      <Payment />
-      {/* < Footer Logo={logo} /> */}
+
     </div>
+
   );
 };
 
