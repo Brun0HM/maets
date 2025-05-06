@@ -154,9 +154,14 @@ img.responsiva {
     margin: 0 auto !important;
   }
 }
+
 .Modal {
   background-color: #202127 !important;
   max-width: 996px;
+}
+.FundoForm{
+  background-color: #202127 !important;
+
 }
 
 .Fts img {
@@ -170,6 +175,15 @@ img.responsiva {
 
 .BtnTamanho {
   font-size: 1rem;
+}
+.Juntinhos input{ 
+  width: 160px;
+  height: 29.56px;
+}
+.inputCredit {
+  background: #3B3B3B !important;
+  min-height: 45px;
+
 }
 
 .generoTabela {

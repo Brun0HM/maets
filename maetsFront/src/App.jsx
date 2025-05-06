@@ -12,12 +12,19 @@ import Footer from "./components/Footer";
 import Profile from "./pages/Profile";
 import DashBoard from "./pages/DashBoard";
 import TablesAdmin from "./components/TablesAdmin";
+import FormCupom from "./components/FormCupom";
 
 const App = () => {
   return (
     <div className="">
       <Header Logo={logo} Profile={perfito} />
       <TablesAdmin />
+      <FormCupom />
+      <Header Logo={logo} Profile={profile} />
+      {/* <Profile Logo={logo} />
+      <Home /> */}
+      <Payment />
+      {/* < Footer Logo={logo} /> */}
     </div>
   );
 };
