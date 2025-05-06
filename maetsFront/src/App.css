@@ -171,3 +171,12 @@ img.responsiva {
 .BtnTamanho {
   font-size: 1rem;
 }
+
+.generoTabela {
+  color: #7c7c7c !important;
+}
+
+.generoTabela :hover {
+  color: #ffffff !important;
+  transition: color 0.3s ease-in-out;
+}

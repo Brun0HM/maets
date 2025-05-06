@@ -11,12 +11,13 @@ import Payment from "./pages/Payment";
 import Footer from "./components/Footer";
 import Profile from "./pages/Profile";
 import DashBoard from "./pages/DashBoard";
+import TablesAdmin from "./components/TablesAdmin";
 
 const App = () => {
   return (
     <div className="">
       <Header Logo={logo} Profile={perfito} />
-      <DashBoard />
+      <TablesAdmin />
     </div>
   );
 };
