@@ -10,12 +10,6 @@ import Footer from "./components/Footer";
 const App = () => {
   return (
     <div>
-
-      <Header Logo={logo} Profile={profile}/>
-      {/* <Profile Logo={logo} />
-      <Home /> */}
-      <Payment />
-      < Footer Logo={logo} />
     </div>
   );
 };
