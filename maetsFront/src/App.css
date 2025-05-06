@@ -1,13 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
 
 body {
+
   font-family: "Inter", sans-serif !important;
   background-color: #111 !important;
   margin: 0 !important;
   padding: 0 !important;
   box-sizing: border-box !important;
   color: #fff !important;
-  /* user-select: none !important; */
+
 }
 
 .conteudo {
@@ -104,6 +105,25 @@ img.responsiva {
   border-radius: 4px;
 }
 
+.conteudo {
+  background-color: #252525 !important;
+
+}
+
+.carrinho {
+  background-color: #24252A !important;
+}
+
+.profilesize {
+      width: 60px;
+      height: 60px;
+}
+
+.inputTamanho {
+  min-width: 347px;
+}
+
 .btnCor {
   background: #401be4 !important;
 }
+

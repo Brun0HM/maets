@@ -1,17 +1,19 @@
 import React from "react";
-import Profile from "./pages/Profile";
+import Header from "./components/Header";
 import logo from "./assets/logo.png";
+import profile from "./assets/Profile.png";
 import Home from "./pages/Home";
 import Cart from "./pages/Cart";
-import Footer from "./components/Footer";
+import Payment from "./pages/Payment";
 
 const App = () => {
   return (
     <div>
+
+      <Header Logo={logo} Profile={profile}/>
       {/* <Profile Logo={logo} />
       <Home /> */}
-      {/* <Cart /> */}
-      <Footer Logo={logo} />
+      <Payment />
     </div>
   );
 };
