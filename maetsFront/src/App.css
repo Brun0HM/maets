@@ -115,6 +115,15 @@ img.responsiva {
   background: #401be4 !important;
 }
 
+.inputCredit {
+  background: #3b3b3b !important;
+  min-height: 45px;
+}
+
+.inputCredit::placeholder {
+  color: #7f7f7f !important;
+}
+
 .Login {
   background-color: #202127 !important;
   width: 100vh !important;
@@ -148,64 +157,45 @@ img.responsiva {
 .labelo label {
   font-size: 15px !important;
 }
-@media (max-width: 900px) {
-  .Login {
-    width: 90% !important;
-    margin: 0 auto !important;
-  }
+.games {
+  width: 310px;
+  height: 460px;
+  margin: 1.5rem;
+  position: relative;
+  overflow: hidden;
+  border: none;
+  box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.Modal {
-  background-color: #202127 !important;
-  max-width: 996px;
-}
-.FundoForm{
-  background-color: #202127 !important;
-
-}
-
-.Fts img {
-  max-width: 115px;
-  height: auto;
+.games div:nth-of-type(1) {
+  position: absolute;
+  text-align: center;
+  padding: 16px;
+  width: 100%;
+  opacity: 0;
+  top: 0;
+  color: #000000;
 }
 
-.GameInfo {
-  max-width: 99%;
+.games:hover {
+  box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.4);
+  transform: scale(1.05, 1.05);
 }
 
-.BtnTamanho {
-  font-size: 1rem;
-}
-.Juntinhos input{ 
-  width: 160px;
-  height: 29.56px;
-}
-.inputCredit {
-  background: #3B3B3B !important;
-  min-height: 45px;
-
+.games div:nth-of-type(2) img {
+  height: 100%;
+  width: 100%;
 }
 
 
-.inputCredit::placeholder {
-  color: #7F7F7F !important;
+.games div:nth-of-type(3) h3 {
+  margin-top: 5px;
+  color: #f9d3b4;
 }
 
-.generoTabela {
-  color: #7c7c7c !important;
-}
-
-.generoTabela :hover {
-  color: #ffffff !important;
-  transition: color 0.3s ease-in-out;
-}
-
-
-.generoTabela {
-  color: #7c7c7c !important;
-}
-
-.generoTabela :hover {
-  color: #ffffff !important;
-  transition: color 0.3s ease-in-out;
+.games:hover div:nth-of-type(1) {
+  opacity: 1;
 }
