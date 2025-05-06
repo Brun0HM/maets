@@ -1,5 +1,6 @@
 import React from "react";
 
+
 const TablesAdmin = () => {
   return (
     <div className="container conteudo rounded-3 d-flex flex-column align-items-center justify-content-center mt-5 pb-3">
