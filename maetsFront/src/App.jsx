@@ -10,12 +10,13 @@ import Cart from "./pages/Cart";
 import Payment from "./pages/Payment";
 import Footer from "./components/Footer";
 import Profile from "./pages/Profile";
+import DashBoard from "./pages/DashBoard";
 
 const App = () => {
   return (
     <div className="">
       <Header Logo={logo} Profile={perfito} />
-      <Home />
+      <DashBoard />
     </div>
   );
 };
