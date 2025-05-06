@@ -4,38 +4,38 @@ import RegisteredCards from "./RegisteredCards";
 import PurchaseSummary from "./PurchaseSummary";
 
 const PayCard = () => {
-  const [fullName, setFullName] = useState('');
-  const [cardNumber, setCardNumber] = useState('');
-  const [expiry, setExpiry] = useState('');
-  const [cvv, setCvv] = useState('');
+  const [fullName, setFullName] = useState("");
+  const [cardNumber, setCardNumber] = useState("");
+  const [expiry, setExpiry] = useState("");
+  const [cvv, setCvv] = useState("");
   const [savedCards, setSavedCards] = useState([]);
   const [selectedCardIndex, setSelectedCardIndex] = useState(null);
-  const [coupon, setCoupon] = useState('');
+  const [coupon, setCoupon] = useState("");
 
   const cartItems = [
-    { name: 'Product A', price: 49.99 },
-    { name: 'Product B', price: 29.99 },
-    { name: 'Product C', price: 19.99 },
+    { name: "Product A", price: 49.99 },
+    { name: "Product B", price: 29.99 },
+    { name: "Product C", price: 19.99 },
   ];
 
   const total = cartItems.reduce((acc, item) => acc + item.price, 0);
 
   const handleSaveCard = () => {
     if (selectedCardIndex !== null) {
-      alert('This card is already saved!');
+      alert("This card is already saved!");
       return;
     }
 
     if (fullName && cardNumber.length === 16 && expiry && cvv.length === 3) {
       const newCard = { fullName, cardNumber, expiry, cvv };
       setSavedCards([...savedCards, newCard]);
-      setFullName('');
-      setCardNumber('');
-      setExpiry('');
-      setCvv('');
+      setFullName("");
+      setCardNumber("");
+      setExpiry("");
+      setCvv("");
       setSelectedCardIndex(null);
     } else {
-      alert('Fill in all the fields correctly!');
+      alert("Fill in all the fields correctly!");
     }
   };
 
@@ -53,19 +53,19 @@ const PayCard = () => {
     setSavedCards(updatedCards);
     if (selectedCardIndex === index) {
       setSelectedCardIndex(null);
-      setFullName('');
-      setCardNumber('');
-      setExpiry('');
-      setCvv('');
+      setFullName("");
+      setCardNumber("");
+      setExpiry("");
+      setCvv("");
     }
   };
 
   const handlePurchase = () => {
     if (selectedCardIndex === null) {
-      alert('Select a card to checkout.');
+      alert("Select a card to checkout.");
       return;
     }
-    alert('Purchase successfully completed!');
+    alert("Purchase successfully completed!");
   };
 
   return (

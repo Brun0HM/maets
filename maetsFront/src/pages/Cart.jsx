@@ -3,6 +3,7 @@ import FavGames from "../components/FavGames";
 import Sumary from "../components/Sumary";
 import cyberpunk from "../assets/Banner.png";
 import ItensCart from "../components/ItensCart";
+import PurchaseSummary from "../components/PurchaseSummary";
 
 const Cart = () => {
   return (
@@ -42,7 +43,7 @@ const Cart = () => {
         <div className="col-12 col-lg-4 d-flex flex-column justify-content-start py-1">
           <h1 className="fw-bold fs-2 text-center">Order Summary</h1>
           <div className=" d-flex align-items-center justify-content-center">
-            <Sumary jogo={"cyberpunk"} preco={79.89} />
+            <PurchaseSummary />
           </div>
         </div>
       </div>

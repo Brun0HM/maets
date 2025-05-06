@@ -15,12 +15,15 @@ import TablesAdmin from "./components/TablesAdmin";
 import FormCupom from "./components/FormCupom";
 import FormGames from "./components/FormGames";
 import FormCate from "./components/FormCate";
+import PurchaseSummary from "./components/PurchaseSummary";
+import Sumary from "./components/Sumary";
+import PayCard from "./components/PayCard";
 
 const App = () => {
   return (
     <div>
+      <Cart />
     </div>
-
   );
 };
 
