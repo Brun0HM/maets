@@ -20,7 +20,6 @@ const App = () => {
       <Header Logo={logo} Profile={perfito} />
       <TablesAdmin />
       <FormCupom />
-      <Header Logo={logo} Profile={profile} />
       {/* <Profile Logo={logo} />
       <Home /> */}
       <Payment />
