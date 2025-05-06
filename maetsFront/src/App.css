@@ -113,6 +113,7 @@ img.responsiva {
 >>>>>>> main
 }
 
+<<<<<<< HEAD
 .conteudo {
   background-color: #252525 !important;
 
@@ -131,3 +132,8 @@ img.responsiva {
   min-width: 347px;
 }
 
+=======
+.btnCor {
+  background: #401be4 !important;
+}
+>>>>>>> main
