@@ -5,6 +5,7 @@ import profile from "./assets/Profile.png";
 import Home from "./pages/Home";
 import Cart from "./pages/Cart";
 import Payment from "./pages/Payment";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
       {/* <Profile Logo={logo} />
       <Home /> */}
       <Payment />
+      < Footer Logo={logo} />
     </div>
   );
 };
