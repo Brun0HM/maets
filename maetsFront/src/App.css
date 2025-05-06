@@ -115,8 +115,6 @@ img.responsiva {
   background: #401be4 !important;
 }
 
-<<<<<<< HEAD
-=======
 .Login {
   background-color: #202127 !important;
   width: 100vh !important;
@@ -182,14 +180,12 @@ img.responsiva {
   width: 160px;
   height: 29.56px;
 }
->>>>>>> 71a775b2795edca46cff121278d62ae3a687e32d
 .inputCredit {
   background: #3B3B3B !important;
   min-height: 45px;
 
 }
 
-<<<<<<< HEAD
 
 .inputCredit::placeholder {
   color: #7F7F7F !important;
@@ -205,7 +201,6 @@ img.responsiva {
 }
 
 
-=======
 .generoTabela {
   color: #7c7c7c !important;
 }
@@ -214,4 +209,3 @@ img.responsiva {
   color: #ffffff !important;
   transition: color 0.3s ease-in-out;
 }
->>>>>>> 71a775b2795edca46cff121278d62ae3a687e32d
