@@ -3,7 +3,7 @@ import CardGame from "./CardGame";
 
 const Carrocel = (props) => {
   return (
-    <div className="container d-flex overflow-x-scroll scroller">
+    <div className="container gap-0 d-flex overflow-x-scroll scroller">
       <CardGame />
       <CardGame />
       <CardGame />

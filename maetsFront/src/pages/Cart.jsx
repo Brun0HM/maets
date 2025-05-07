@@ -2,6 +2,7 @@ import React from "react";
 import cyberpunk from "../assets/Banner.png";
 import ItemsCart from "../components/ItensCart";
 import PurchaseSummary from "../components/PurchaseSummary";
+import Sumary from "../components/Sumary";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import logo from "../assets/Logo.png";
@@ -47,7 +48,7 @@ const Cart = () => {
       <div className="col-12 col-lg-4 d-flex flex-column justify-content-start py-1">
         <h1 className="fw-bold fs-2 text-center">Order Summary</h1>
         <div className="d-flex align-items-center justify-content-center">
-          <Summary game={"Cyberpunk 2077"} price={79.89} />
+          <PurchaseSummary game={"Cyberpunk 2077"} price={79.89} />
         </div>
       </div>
         </div>
