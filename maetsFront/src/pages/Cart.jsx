@@ -44,7 +44,7 @@ const Cart = () => {
                     price={item.preco}
                     banner={item.banner}
                     genre={item.genre}
-                    onRemove={() => handleRemoveItem(index)} 
+                    onRemove={() => handleRemoveItem(index)}
                   />
                 ))}
               </div>
@@ -52,7 +52,9 @@ const Cart = () => {
           </div>
 
           {/* Resumo da compra */}
-          <div className="col-12 col-lg-4"></div>
+          <div className="col-12 col-lg-4">
+            <PurchaseSummary cartItems={cartItems} />
+          </div>
         </div>
       </div>
       <Footer Logo={logo} />
