@@ -26,9 +26,7 @@ createRoot(document.getElementById("root")).render(
         <Route path="/payment" element={<Payment />} />
         <Route path="/dashboard" element={<DashBoard />} />
         <Route path="/createaccount" element={<CreateAccount />} />
-
         <Route path="/editprofile" element={<EditProfile />} />
-        
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

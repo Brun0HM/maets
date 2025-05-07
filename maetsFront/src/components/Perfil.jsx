@@ -1,6 +1,6 @@
 import React from "react";
-import { useState, useEffect } from "react";
 import { Link } from "react-router";
+import { useState, useEffect } from "react";
 
 
 
@@ -29,11 +29,13 @@ const Perfil = (props) => {
         <div className="profile d-flex flex-column justify-content-center">
           <h1 className="marginha fw-semibold"> {username || 'Guest'} </h1>
           <div className="d-flex">
-            <p className="">Edit Profile</p>
+            <Link to="/editProfile" className="text-decoration-none text-white">
+              <p className="">Edit Profile</p>
+            </Link>
             <i className="bi bi-caret-right-fill"></i>
           </div>
           <div className="text-dark d-flex align-items-center rounded-4 tamanho mb-2 level gap-2">
-            <span className="m-2 border border-2 border-black rounded-circle">
+            <span className="m-2 border border-2 border-black rounded-circle quadrado">
               35
             </span>
             <span className="">Colector</span>
