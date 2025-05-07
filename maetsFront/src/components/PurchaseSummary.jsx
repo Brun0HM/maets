@@ -1,18 +1,18 @@
 // **components/PurchaseSummary.jsx**
 import React, { useState } from 'react';
 
-// Recebe `cartItems` por props:
+// Receives `cartItems` as props:
 const PurchaseSummary = ({ cartItems = [] }) => {
   const [coupon, setCoupon] = useState('');
   const total = cartItems.reduce((acc, item) => acc + item.price, 0);
 
   const handleCheckout = () => {
-    console.log('Checkout iniciado', { cartItems, coupon });
+    console.log('Checkout started', { cartItems, coupon });
   };
 
   return (
     <div className="col-12 col-md-4">
-      <div className="conteudo border-0 rounded-4 p-4">
+      <div className="content border-0 rounded-4 p-4">
         <h5 className="fw-bold mb-3">Purchase Summary</h5>
 
         {cartItems.map((item, idx) => (
@@ -23,6 +23,8 @@ const PurchaseSummary = ({ cartItems = [] }) => {
         ))}
 
         <hr />
+        </div>
+        <div className="d-flex justify-content-between fw-bold mb-3">
 
         <div className="d-flex justify-content-between fw-bold mb-3">
           <span>Total:</span>

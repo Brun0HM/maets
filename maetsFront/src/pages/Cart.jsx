@@ -3,6 +3,7 @@ import FavGames from "../components/FavGames";
 import Sumary from "../components/Sumary";
 import cyberpunk from "../assets/Banner.png";
 import ItensCart from "../components/ItensCart";
+import PurchaseSummary from "../components/PurchaseSummary";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import logo from "../assets/Logo.png";
@@ -44,6 +45,13 @@ const Cart = () => {
             </div>
           </div>
 
+        {/* Sumário */}
+        <div className=""></div>
+      </div>
+      <div className="p-5">
+
+      <PurchaseSummary />
+      </div>
           {/* Sumário */}
           <div className="col-12 col-lg-4 d-flex flex-column justify-content-start py-1">
             <h1 className="fw-bold fs-2 text-center">Order Summary</h1>
