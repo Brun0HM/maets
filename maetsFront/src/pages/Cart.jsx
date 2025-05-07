@@ -5,7 +5,6 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import { useNavigate } from "react-router";
 import logo from "../assets/Logo.png";
-import profile from "../assets/profile.png";
 
 const Cart = () => {
   const [cartItems, setCartItems] = useState([]);

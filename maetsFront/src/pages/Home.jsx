@@ -1,7 +1,6 @@
 import React from "react";
 import Destaque from "../components/Destaque";
 import banner from "../assets/jojo.png";
-import Header from "../components/Header";
 import fotinha from "../assets/fotinha.png";
 import CardGame from "../components/CardGame";
 
