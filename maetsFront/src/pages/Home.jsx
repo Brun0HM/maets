@@ -8,8 +8,9 @@ import elden from "../assets/eldenring.avif";
 import rdr from "../assets/rdr2.jpg";
 import hl from "../assets/Hogwarts.webp";
 import cyberpunk from "../assets/Banner.png";
+import CardGame from "../components/CardGame";
 
-const Home = () => {
+const Home = (props) => {
   return (
     <div>
       <Destaque
@@ -22,14 +23,21 @@ const Home = () => {
         fotinha={fotinha}
       />
       <hr className="container" />
-      <Carrocel
-        Banner={banner}
-        Banner2={elden}
-        Banner3={rdr}
-        Banner4={hl}
-        Banner5={cyberpunk}
-        Banner6={elden}
-      />
+      <div className="container d-flex overflow-x-scroll scroller">
+      <div className="d-flex">
+        {props.game.map((game, index) => (
+          <div className="" key={index}>
+            <CardGame
+              title={game.title}
+              descricao={game.descricao}
+              banner={game.banner}
+              imagem={game.imagem}
+              genero={game.genero}
+            />
+          </div>
+        ))}
+      </div>
+    </div>
     </div>
   );
 };
