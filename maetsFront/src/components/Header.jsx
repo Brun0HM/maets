@@ -2,14 +2,22 @@ import React from "react";
 import { useState, useEffect } from "react";
 import "../app.css";
 import { Link } from "react-router";
+
 const Header = (props) => {
     const [username, setUsername] = useState('');
+    const [foto, setFoto] = useState('');
   
     useEffect(() => {
       // Recupera os dados do localStorage quando o componente for montado
       const storedData = JSON.parse(localStorage.getItem('devlogin'));
-      if (storedData && storedData.username) {
-        setUsername(storedData.username);
+    
+      if (storedData) {
+        if (storedData.username) {
+          setUsername(storedData.username);
+        }
+        if (storedData.foto) {
+          setFoto(storedData.foto);
+        }
       }
     }, []);
 
@@ -68,7 +76,7 @@ const Header = (props) => {
                 className="rounded-2"
                 width="60px"
                 height="60px"
-                src={props.Profile}
+                src={foto || props.Profile}
                 alt="profile"
               />
             </div>

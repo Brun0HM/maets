@@ -15,7 +15,7 @@ const Cart = () => {
   ];
   return (
     <div>
-      <Header Logo={logo} Profile={profile} />
+      <Header Logo={logo} />
       <div className="container min-vh-100 text-white py-5 px-md-5">
         <div className="row justify-content-between">
           {/* List of games */}

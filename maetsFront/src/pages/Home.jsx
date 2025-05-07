@@ -10,6 +10,7 @@ import hl from "../assets/Hogwarts.webp";
 import cyberpunk from "../assets/Banner.png";
 import CardGame from "../components/CardGame";
 
+
 const Home = (props) => {
   return (
     <div>

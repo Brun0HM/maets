@@ -1,12 +1,33 @@
 import React from "react";
+import { useState, useEffect } from "react";
+import { Link } from "react-router";
+
+
 
 const Perfil = (props) => {
+  const [username, setUsername] = useState('');
+  const [foto, setFoto] = useState('');
+
+  useEffect(() => {
+    // Recupera os dados do localStorage quando o componente for montado
+    const storedData = JSON.parse(localStorage.getItem('devlogin'));
+  
+    if (storedData) {
+      if (storedData.username) {
+        setUsername(storedData.username);
+      }
+      if (storedData.foto) {
+        setFoto(storedData.foto);
+      }
+    }
+  }, []);
+
   return (
     <div>
       <div className="container d-flex justify-content-center align-items-center">
-        <img className="rounded-3 m-3" src={props.Profile} alt="" />
+        <img className="rounded-3 m-3 profileSizeChange" src={foto} alt="" />
         <div className="profile d-flex flex-column justify-content-center">
-          <h1 className="marginha fw-semibold">Leon Martins</h1>
+          <h1 className="marginha fw-semibold"> {username || 'Guest'} </h1>
           <div className="d-flex">
             <p className="">Edit Profile</p>
             <i className="bi bi-caret-right-fill"></i>
