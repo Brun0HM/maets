@@ -1,12 +1,11 @@
 import React from "react";
 
-
 const TablesAdmin = () => {
   return (
     <div className="container conteudo rounded-3 d-flex flex-column align-items-center justify-content-center mt-5 pb-3">
       <div className="input-group mt-2 d-flex justify-content-center">
         <a href="#">
-          <i class="bi bi-plus-square btn btn-outline-success rounded-2 me-2"></i>
+          <i className="bi bi-plus-square btn btn-outline-success rounded-2 me-2"></i>
         </a>
         <input
           className="border-0  border-bottom  conteudo text-light align-items-center justify-content-center rounded-end-0"
@@ -25,10 +24,10 @@ const TablesAdmin = () => {
             <span className="genero fw-light">6328790</span>
             <div>
               <a className="generoTabela" href="#">
-                <i class="bi bi-pencil-square me-1"></i>
+                <i className="bi bi-pencil-square me-1"></i>
               </a>
               <a className="generoTabela" href="#">
-                <i class="bi bi-trash3"></i>
+                <i className="bi bi-trash3"></i>
               </a>
             </div>
           </div>

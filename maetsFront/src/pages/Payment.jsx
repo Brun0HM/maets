@@ -1,27 +1,17 @@
-import React, { useState } from 'react'
-import PayCard from '../components/PayCard'
-import Footer from "../components/Footer";
-import Header from "../components/Header";
-import logo from "../assets/Logo.png";
-import perfito from "../assets/profile.png";
-import PurchaseSummary from '../components/PurchaseSummary'
-import RegisterCard from '../components/RegisterCard'
-import RegisteredCards from '../components/RegisteredCards'
+// pages/Payment.jsx
+import React from 'react';
+import RegisteredCards from '../components/RegisteredCards';
+import RegisterCard from '../components/RegisterCard';
+import PurchaseSummary from '../components/PurchaseSummary';
 
-const Payment = () => {
+export default function Payment() {
   return (
-    <>
-      <Header Logo={logo} Profile={perfito}/>
-      <div className="container my-5">
-      <div className="d-flex justify-content-center gap-4 flex-wrap">
+    <div className="container my-5">
+      <div className="row gx-4 gy-4 justify-content-center">
         <RegisteredCards />
         <RegisterCard />
         <PurchaseSummary />
       </div>
     </div>
-    <Footer Logo={logo}/>
-    </>
-  )
+  );
 }
-
-export default Payment
