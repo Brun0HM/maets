@@ -1,18 +1,70 @@
-// components/RegisterCard.jsx
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
-export default function RegisterCard() {
-  const [fullName, setFullName] = useState('');
-  const [cardNumber, setCardNumber] = useState('');
-  const [expiry, setExpiry] = useState('');
-  const [cvv, setCvv] = useState('');
+export default function RegisterCard({ setHasPaymentMethod, updateCards }) {
+  const [fullName, setFullName] = useState("");
+  const [cardNumber, setCardNumber] = useState("");
+  const [expiry, setExpiry] = useState("");
+  const [cvv, setCvv] = useState("");
+  const [errors, setErrors] = useState({
+    fullName: "",
+    cardNumber: "",
+    expiry: "",
+    cvv: "",
+  });
+
+  const validate = () => {
+    const newErrors = {};
+
+    // Validação do nome completo
+    if (fullName.trim().length < 3 || fullName.trim().length > 50) {
+      newErrors.fullName = "Name must be between 3 and 50 characters.";
+    }
+
+    // Validação do número do cartão
+    if (cardNumber.trim().length !== 16) {
+      newErrors.cardNumber = "Card number must be exactly 16 digits.";
+    } else if (!/^\d+$/.test(cardNumber)) {
+      newErrors.cardNumber = "Card number must contain only digits.";
+    }
+
+    // Validação da data de expiração
+    if (!/^\d{2}\/\d{2}$/.test(expiry)) {
+      newErrors.expiry = "Expiration date must be in MM/YY format.";
+    }
+
+    // Validação do CVV
+    if (cvv.trim().length !== 3) {
+      newErrors.cvv = "CVV must be exactly 3 digits.";
+    } else if (!/^\d+$/.test(cvv)) {
+      newErrors.cvv = "CVV must contain only digits.";
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0; // Retorna true se não houver erros
+  };
 
   const handleSaveCard = () => {
-    console.log('Card saved', { fullName, cardNumber, expiry, cvv });
-    setFullName('');
-    setCardNumber('');
-    setExpiry('');
-    setCvv('');
+    if (validate()) {
+      const newCard = { fullName, cardNumber, expiry, cvv };
+
+      // Salva o cartão no localStorage
+      const savedCards = JSON.parse(localStorage.getItem("cards")) || [];
+      savedCards.push(newCard);
+      localStorage.setItem("cards", JSON.stringify(savedCards));
+
+      // Atualiza os cartões no componente pai
+      updateCards(savedCards);
+
+      console.log("Card saved", newCard);
+      setFullName("");
+      setCardNumber("");
+      setExpiry("");
+      setCvv("");
+      setErrors({});
+      setHasPaymentMethod(true); // Atualiza o estado no componente pai
+    } else {
+      setHasPaymentMethod(false); // Define como inválido se houver erros
+    }
   };
 
   return (
@@ -27,7 +79,11 @@ export default function RegisterCard() {
             placeholder="Enter your full name"
             value={fullName}
             onChange={(e) => setFullName(e.target.value)}
+            maxLength={50}
           />
+          {errors.fullName && (
+            <small className="text-danger">{errors.fullName}</small>
+          )}
         </div>
         <div className="mb-3">
           <label className="form-label">Card Number</label>
@@ -39,10 +95,13 @@ export default function RegisterCard() {
             value={cardNumber}
             onChange={(e) => setCardNumber(e.target.value)}
           />
+          {errors.cardNumber && (
+            <small className="text-danger">{errors.cardNumber}</small>
+          )}
         </div>
-        <div className="mb-3">
-          <label className="form-label">Expiry Date / CVV</label>
-          <div className="d-flex flex-column flex-sm-row gap-3">
+        <div className="w-100 d-flex gap-2">
+          <div className="mb-3 w-50">
+            <label className="form-label">Expiry Date (MM/YY)</label>
             <input
               className="form-control inputCredit border-0 text-light"
               type="text"
@@ -51,21 +110,28 @@ export default function RegisterCard() {
               value={expiry}
               onChange={(e) => setExpiry(e.target.value)}
             />
+            {errors.expiry && (
+              <small className="text-danger">{errors.expiry}</small>
+            )}
+          </div>
+          <div className="mb-3 w-50">
+            <label className="form-label">CVV</label>
             <input
               className="form-control inputCredit border-0 text-light"
               type="text"
-              placeholder="CVV"
+              placeholder="123"
               maxLength={3}
               value={cvv}
               onChange={(e) => setCvv(e.target.value)}
             />
+            {errors.cvv && <small className="text-danger">{errors.cvv}</small>}
           </div>
         </div>
         <button
-          className="btnCor border-0 text-light py-3 px-4 rounded-3 fw-bold w-100"
+          className="btn btnCor text-white w-100"
           onClick={handleSaveCard}
         >
-          Save
+          Save Card
         </button>
       </div>
     </div>

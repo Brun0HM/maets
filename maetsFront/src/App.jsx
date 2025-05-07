@@ -17,7 +17,6 @@ import FormGames from "./components/FormGames";
 import FormCate from "./components/FormCate";
 import EditProfile from "./pages/EditProfile";
 import PurchaseSummary from "./components/PurchaseSummary";
-import PayCard from "./components/PayCard";
 import CardGame from "./components/CardGame";
 
 const App = () => {
@@ -70,11 +69,14 @@ const App = () => {
   ];
   
 
+  return <>
+  <Header/>
+  <Home game={game}/>
+  </>;
   return (
-    <>
-      <Header title={game[0].title} descricao={game[0].descricao} preco={game[0].preco} banner={game[0].banner} />
-      <Home game={game} />
-    </>
+    <div>
+      
+    </div>
   );
 };
 

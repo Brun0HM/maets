@@ -13,7 +13,7 @@ const ItensCart = ({name, price, banner, genre, onRemove}) => {
             <span className="genero">{genre}</span>
           </div>
         </div>
-        
+
         {/* Preço e lixeira */}
         <div className="d-flex flex-column align-items-lg-end  mt-3 mt-md-0">
           <h4 className="fs-5 mb-2">${price}</h4>
