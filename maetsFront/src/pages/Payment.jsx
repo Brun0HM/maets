@@ -12,10 +12,14 @@ const Payment = () => {
   return (
     <>
       <Header Logo={logo} Profile={perfito}/>
-    <PayCard />
+      <div className="container my-5">
+      <div className="d-flex justify-content-center gap-4 flex-wrap">
+        <RegisteredCards />
+        <RegisterCard />
+        <PurchaseSummary />
+      </div>
+    </div>
     <Footer Logo={logo}/>
-      <RegisterCard />
-      <PurchaseSummary />
     </>
   )
 }
