@@ -63,13 +63,10 @@ const App = () => {
     },
   ];
 
-  return <>
-  <Header/>
-  <Home game={game}/>
-  </>;
   return (
     <div>
-      
+  <Header/>
+  <Home game={game}/>
     </div>
   );
 };

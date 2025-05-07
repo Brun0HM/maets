@@ -272,3 +272,11 @@ img.responsiva {
   padding-left: 3px;
   padding-top: 1px;
 }
+
+.profileSizeChange {
+  max-width: 129.60px !important;
+  max-height: 129.60px !important;
+  min-width: 129.60px  !important;
+  min-height: 129.60px !important;
+  object-fit: cover;
+}
