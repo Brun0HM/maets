@@ -23,51 +23,59 @@ import CardGame from "./components/CardGame";
 const App = () => {
   const game = [
     {
+      title: "Hades",
+      descricao:
+        "Hades é um roguelike dungeon crawler onde você joga como Zagreus, filho de Hades, tentando escapar do submundo.",
+      banner: "https://placehold.co/580x330",
+      imagem: "https://placehold.co/250x350",
+      genero: "Roguelike, Ação, Indie",
+      preco: 49.99,
+    },
+    {
       title: "The Witcher 3: Wild Hunt",
       descricao:
-        "Torne-se um caçador de monstros profissional e embarque numa jornada épica para encontrar a Criança da Profecia, num mundo aberto cheio de escolhas morais e consequências.",
+        "Um RPG de mundo aberto onde você é Geralt de Rívia, um caçador de monstros em uma jornada épica cheia de escolhas e consequências.",
       banner: "https://placehold.co/580x330",
       imagem: "https://placehold.co/250x350",
       genero: "RPG, Mundo Aberto, Fantasia",
-    },
-    {
-      title: "Hollow Knight",
-      descricao:
-        "Explore cavernas vastas, enfrente criaturas corrompidas e descubra mistérios antigos num mundo subterrâneo desenhado à mão.",
-      banner: "https://placehold.co/580x330",
-      imagem: "https://placehold.co/250x350",
-      genero: "Metroidvania, Ação, Indie",
+      preco: 99.9,
     },
     {
       title: "Stardew Valley",
       descricao:
-        "Deixe a cidade para trás e comece uma nova vida cultivando, pescando, minerando e construindo laços com a comunidade local.",
+        "Assuma a fazenda do seu avô em Stardew Valley, cultivando, criando animais, minerando, pescando e se relacionando com os aldeões.",
       banner: "https://placehold.co/580x330",
       imagem: "https://placehold.co/250x350",
-      genero: "Simulação, Agricultura, Casual",
+      genero: "Simulação, Agricultura, Indie",
+      preco: 24.9,
     },
     {
-      title: "DOOM Eternal",
+      title: "Hollow Knight",
       descricao:
-        "Lute contra hordas demoníacas com armas destrutivas e movimentação agressiva neste aclamado FPS.",
+        "Explore as ruínas de Hallownest neste metroidvania desafiador com combate preciso e um mundo desenhado à mão.",
       banner: "https://placehold.co/580x330",
       imagem: "https://placehold.co/250x350",
-      genero: "Ação, Tiro, Gore",
+      genero: "Metroidvania, Ação, Indie",
+      preco: 36.9,
     },
     {
-      title: "Hades",
+      title: "Celeste",
       descricao:
-        "Desafie o deus da morte neste aclamado roguelike da Supergiant Games, com combates rápidos, narrativa rica e visual estilizado.",
+        "Ajude Madeline a escalar a Montanha Celeste em um jogo de plataforma desafiador com narrativa sensível e trilha marcante.",
       banner: "https://placehold.co/580x330",
       imagem: "https://placehold.co/250x350",
-      genero: "Roguelike, Ação, Indie",
+      genero: "Plataforma, Desafio, Indie",
+      preco: 29.9,
     },
   ];
+  
 
-  return <>
-  <Header/>
-  <Home game={game}/>
-  </>;
+  return (
+    <>
+      <Header title={game[0].title} descricao={game[0].descricao} preco={game[0].preco} banner={game[0].banner} />
+      <Home game={game} />
+    </>
+  );
 };
 
 export default App;

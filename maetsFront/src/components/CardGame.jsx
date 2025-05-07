@@ -19,6 +19,7 @@ const CardGame = (props) => {
           descricao={props.descricao}
           banner={props.banner}
           genero={props.genero}
+          preco={props.preco}
         />
       )}
     </>

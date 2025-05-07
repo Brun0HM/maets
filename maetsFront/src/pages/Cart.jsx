@@ -1,58 +1,58 @@
-import React from "react";
-import cyberpunk from "../assets/Banner.png";
+import React, { useEffect, useState } from "react";
 import ItemsCart from "../components/ItensCart";
 import PurchaseSummary from "../components/PurchaseSummary";
-import Sumary from "../components/Sumary";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import logo from "../assets/Logo.png";
 import profile from "../assets/profile.png";
 
 const Cart = () => {
-  const cartItems = [
-    { name: "Cyberpunk", price: 48.99 },
-    { name: "Cyberpunk dlc", price: 29.99 },
-    { name: "Cyberpunk 200 coins", price: 9.99 },
-  ];
+  const [cartItems, setCartItems] = useState([]);
+
+  useEffect(() => {
+    // Recupera os itens do carrinho do LocalStorage ao carregar a página
+    const storedCart = JSON.parse(localStorage.getItem("cart")) || [];
+    setCartItems(storedCart);
+  }, []);
+  const handleRemoveItem = (indexToRemove) => {
+    // Remove o item do estado
+    const updatedCart = cartItems.filter((_, index) => index !== indexToRemove);
+
+    // Atualiza o LocalStorage
+    localStorage.setItem("cart", JSON.stringify(updatedCart));
+
+    // Atualiza o estado
+    setCartItems(updatedCart);
+  };
+
   return (
     <div>
       <Header Logo={logo} Profile={profile} />
       <div className="container min-vh-100 text-white py-5 px-md-5">
         <div className="row justify-content-between">
-          {/* List of games */}
+          {/* Lista de jogos */}
           <div className="col-12 col-lg-8 mb-4">
             <h3 className="mb-4 fs-2 fw-bold">Your shopping cart</h3>
-            <div className="d-flex flex-column gap-3">
-              <ItemsCart
-                Banner={cyberpunk}
-                title="Cyberpunk 2077"
-                genre="RPG"
-                price={79.95}
-              />
-              <ItemsCart
-                Banner={cyberpunk}
-                title="Hogwarts Legacy"
-                genre="RPG"
-                price={98.95}
-              />
-              <ItemsCart
-                Banner={cyberpunk}
-                title="Elden Ring"
-                genre="Action"
-                price={69.95}
-              />
-            </div>
-            <div className="text-end">
-              <button className="btn btn-link text-decoration-none text-white opacity-75">
-                Remove all
-              </button>
-            </div>
+            {cartItems.length === 0 ? (
+              <p>O carrinho está vazio.</p>
+            ) : (
+              <div className="d-flex flex-column gap-3">
+                {cartItems.map((item, index) => (
+                  <ItemsCart
+                    key={index}
+                    name={item.title}
+                    price={item.preco}
+                    banner={item.banner}
+                    genre={item.genre}
+                    onRemove={() => handleRemoveItem(index)} 
+                  />
+                ))}
+              </div>
+            )}
           </div>
 
-          {/* Summary */}
-          <div className="col-12 col-lg-4 pt-5 mt-3">
-            <PurchaseSummary cartItems={cartItems} />
-          </div>
+          {/* Resumo da compra */}
+          <div className="col-12 col-lg-4"></div>
         </div>
       </div>
       <Footer Logo={logo} />
@@ -61,4 +61,3 @@ const Cart = () => {
 };
 
 export default Cart;
-<Footer Logo={logo} />;

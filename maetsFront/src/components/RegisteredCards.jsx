@@ -1,18 +1,17 @@
 // components/RegisteredCards.jsx
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 export default function RegisteredCards() {
   const [cards, setCards] = useState([]);
   const [selectedIndex, setSelectedIndex] = useState(null);
 
-  const maskCardNumber = (num) => '**** **** **** ' + num.slice(-4);
+  const maskCardNumber = (num) => "**** **** **** " + num.slice(-4);
 
   const handleSelect = (i) => setSelectedIndex(i);
   const handleDelete = (i) => {
     setCards(cards.filter((_, idx) => idx !== i));
     if (selectedIndex === i) setSelectedIndex(null);
   };
-
   return (
     <div className="">
       <div className="conteudo text-light border-0 rounded-4 pt-4 pb-4">
@@ -25,9 +24,9 @@ export default function RegisteredCards() {
               key={i}
               onClick={() => handleSelect(i)}
               className={`p-3 mb-3 rounded-3 d-flex justify-content-between align-items-center ${
-                i === selectedIndex ? 'border border-success' : ''
+                i === selectedIndex ? "border border-success" : ""
               }`}
-              style={{ cursor: 'pointer' }}
+              style={{ cursor: "pointer" }}
             >
               <div>
                 <p className="mb-1 fw-bold">{card.fullName}</p>
@@ -49,4 +48,3 @@ export default function RegisteredCards() {
     </div>
   );
 }
-
