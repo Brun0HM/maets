@@ -15,7 +15,7 @@ export default function PurchaseSummary() {
   };
 
   return (
-    <div className="col-12 col-md-4">
+    <div className="">
       <div className="conteudo text-light border-0 rounded-4 p-4">
         <h5 className="fw-bold mb-3">Purchase Summary</h5>
         {cartItems.map((item, idx) => (

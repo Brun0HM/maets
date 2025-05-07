@@ -44,6 +44,9 @@ const Cart = () => {
           </div>
 
           {/* Summary */}
+          <div className="col-12 col-lg-5">
+            <PurchaseSummary />
+          </div>
         </div>
       </div>
       <Footer Logo={logo} />
