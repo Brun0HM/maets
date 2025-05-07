@@ -43,19 +43,13 @@ const Cart = () => {
             </div>
           </div>
 
-      {/* Summary */}
-      <div className="col-12 col-lg-4 d-flex flex-column justify-content-start py-1">
-        <h1 className="fw-bold fs-2 text-center">Order Summary</h1>
-        <div className="d-flex align-items-center justify-content-center">
-          <Summary game={"Cyberpunk 2077"} price={79.89} />
+          {/* Summary */}
         </div>
       </div>
-        </div>
-      </div>
-      <Footer Logo={logo}/>
+      <Footer Logo={logo} />
     </div>
   );
 };
 
 export default Cart;
-      <Footer Logo={logo} />
+<Footer Logo={logo} />;
