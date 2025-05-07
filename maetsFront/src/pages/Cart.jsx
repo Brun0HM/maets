@@ -40,12 +40,11 @@ const Cart = () => {
         </div>
 
         {/* Sumário */}
-        <div className="col-12 col-lg-4 d-flex flex-column justify-content-start py-1">
-          <h1 className="fw-bold fs-2 text-center">Order Summary</h1>
-          <div className=" d-flex align-items-center justify-content-center">
-            <PurchaseSummary />
-          </div>
-        </div>
+        <div className=""></div>
+      </div>
+      <div className="p-5">
+
+      <PurchaseSummary />
       </div>
     </div>
   );

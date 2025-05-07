@@ -22,7 +22,6 @@ import PayCard from "./components/PayCard";
 const App = () => {
   return (
     <div>
-      <Cart />
       <Payment />
     </div>
   );

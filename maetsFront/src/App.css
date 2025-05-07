@@ -107,11 +107,9 @@ img.responsiva {
   border-radius: 4px;
 }
 
-
 .btnCor {
   background: #401be4 !important;
 }
-
 
 .Login {
   background-color: #202127 !important;
@@ -157,9 +155,8 @@ img.responsiva {
   background-color: #202127 !important;
   max-width: 996px;
 }
-.FundoForm{
+.FundoForm {
   background-color: #202127 !important;
-
 }
 
 .Fts img {
@@ -174,19 +171,17 @@ img.responsiva {
 .BtnTamanho {
   font-size: 1rem;
 }
-.Juntinhos input{ 
+.Juntinhos input {
   width: 160px;
   height: 29.56px;
 }
 .inputCredit {
-  background: #3B3B3B !important;
+  background: #3b3b3b !important;
   min-height: 45px;
-
 }
 
-
 .inputCredit::placeholder {
-  color: #7F7F7F !important;
+  color: #7f7f7f !important;
 }
 
 .generoTabela {
@@ -197,7 +192,6 @@ img.responsiva {
   color: #ffffff !important;
   transition: color 0.3s ease-in-out;
 }
-
 
 .generoTabela {
   color: #7c7c7c !important;
