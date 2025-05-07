@@ -1,18 +1,17 @@
-import React from 'react'
-import PurchaseSummary from '../components/PurchaseSummary'
-import RegisterCard from '../components/RegisterCard'
-import RegisteredCards from '../components/RegisteredCards'
+// pages/Payment.jsx
+import React from 'react';
+import RegisteredCards from '../components/RegisteredCards';
+import RegisterCard from '../components/RegisterCard';
+import PurchaseSummary from '../components/PurchaseSummary';
 
-const Payment = () => {
+export default function Payment() {
   return (
     <div className="container my-5">
-      <div className="d-flex justify-content-center gap-4 flex-wrap">
+      <div className="row gx-4 gy-4 justify-content-center">
         <RegisteredCards />
         <RegisterCard />
         <PurchaseSummary />
       </div>
     </div>
-  )
+  );
 }
-
-export default Payment
