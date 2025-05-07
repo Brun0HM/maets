@@ -16,7 +16,7 @@ export default function RegisterCard() {
   };
 
   return (
-    <div className="col-12 col-md-4">
+    <div className="">
       <div className="conteudo text-light border-0 rounded-4 p-4">
         <h2 className="fw-semibold text-center mb-4">Register Card</h2>
         <div className="mb-3">
