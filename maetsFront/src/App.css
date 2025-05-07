@@ -176,6 +176,8 @@ img.responsiva {
 .GameInfo {
   max-width: 99%;
 }
+
+
 .games {
   width: 250px;
   height: 400px;
@@ -208,6 +210,7 @@ img.responsiva {
 .generoTabela {
   color: #7c7c7c !important;
 }
+}
 .games div:nth-of-type(1) {
   position: absolute;
   text-align: center;
@@ -225,6 +228,7 @@ img.responsiva {
 
 .generoTabela {
   color: #7c7c7c !important;
+}
 }
 
 .games div:nth-of-type(2) img {

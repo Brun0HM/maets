@@ -75,8 +75,9 @@ const App = () => {
 
   return (
     <div>
-      <Header Logo={logo} Profile={perfito} />
-      <Payment />
+       <Header Logo={logo} Profile={perfito} />
+      <Home />
+      <Footer Logo={logo} /> 
     </div>
   );
 };

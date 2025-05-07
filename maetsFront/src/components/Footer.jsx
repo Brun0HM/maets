@@ -8,7 +8,7 @@ const Footer = (props) => {
         <img className="" src={props.Logo} alt="" />
         <div className="d-flex flex-column justify-content-end align-items-end">
           <div className="d-flex justify-content-end align-items-center gap-1">
-            <i class="bi bi-github"></i>
+            <i className="bi bi-github"></i>
             <a
               className="text-decoration-none text-white fw-medium"
               href="github.com"
@@ -17,7 +17,7 @@ const Footer = (props) => {
             </a>
           </div>
           <div className="d-flex justify-content-end align-items-center gap-1">
-            <i class="bi bi-github"></i>
+            <i className="bi bi-github"></i>
             <a
               className="text-decoration-none text-white fw-medium"
               href="github.com"
@@ -26,7 +26,7 @@ const Footer = (props) => {
             </a>
           </div>
           <div className="d-flex justify-content-end align-items-center gap-1">
-            <i class="bi bi-github"></i>
+            <i className="bi bi-github"></i>
             <a
               className="text-decoration-none text-white fw-medium"
               href="github.com"
