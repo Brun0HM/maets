@@ -8,13 +8,18 @@ import logo from "../assets/Logo.png";
 import profile from "../assets/profile.png";
 
 const Cart = () => {
+  const cartItems = [
+    { name: "Cyberpunk", price: 48.99 },
+    { name: "Cyberpunk dlc", price: 29.99 },
+    { name: "Cyberpunk 200 coins", price: 9.99 },
+  ];
   return (
     <div>
       <Header Logo={logo} Profile={profile} />
       <div className="container min-vh-100 text-white py-5 px-md-5">
         <div className="row justify-content-between">
           {/* List of games */}
-          <div className="col-12 col-lg-7 mb-4">
+          <div className="col-12 col-lg-8 mb-4">
             <h3 className="mb-4 fs-2 fw-bold">Your shopping cart</h3>
             <div className="d-flex flex-column gap-3">
               <ItemsCart
@@ -44,8 +49,8 @@ const Cart = () => {
           </div>
 
           {/* Summary */}
-          <div className="col-12 col-lg-5">
-            <PurchaseSummary />
+          <div className="col-12 col-lg-4 pt-5 mt-3">
+            <PurchaseSummary cartItems={cartItems} />
           </div>
         </div>
       </div>
