@@ -74,8 +74,8 @@ const App = () => {
 
   return (
     <div>
-      <CardGame />
-{/* 
+      <Home />
+      {/* 
        <Header Logo={logo} Profile={perfito} />
       <Home />
       <Footer Logo={logo} /> */}

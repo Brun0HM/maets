@@ -1,18 +1,18 @@
 import React from "react";
 
-const Modal = () => {
+const Modal = (props) => {
   return (
     <>
-      <div className="Centro d-flex align-items-center justify-content-center">
+      <div className=" d-flex modalBackdrop align-items-center justify-content-center" onClick={props.click}>
         <div className="container d-flex align-items-center justify-content-center">
-          <div className="Modal row bg-dark text-white rounded-3 p-4">
+          <div className="Modal gamemodal row bg-dark text-white rounded-3 p-4">
             <div className="Ibagens col-12 col-md-6 mb-4 mb-md-0">
               <img
                 className="rounded-3 img-fluid"
                 src="https://placehold.co/580x330"
                 alt=""
               />
-              <div className="Fts d-flex mt-2 gap-2">
+              <div className="Fts d-flex mt-2 gap-2 overflow-x-scroll scroller">
                 <img
                   className="rounded-3 img-fluid"
                   src="https://placehold.co/115x65"
