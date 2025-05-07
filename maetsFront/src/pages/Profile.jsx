@@ -1,18 +1,23 @@
 import React from "react";
 import "../App.css";
+import Perfil from "../components/Perfil"
 import FavGames from "../components/FavGames";
 import cyberpunk from "../assets/Banner.png";
 import hogwarts from "../assets/Hogwarts.webp";
 import eldenRing from "../assets/eldenring.avif";
 import AllGames from "../components/AllGames";
 import rdr2 from "../assets/rdr2.jpg";
+import Footer from "../components/Footer";
+import Header from "../components/Header";
+import logo from "../assets/Logo.png";
+import perfito from "../assets/profile.png";
 
 const Profile = (props) => {
   return (
     <div>
-      <img className="m-4" src={props.Logo} alt="Logo Maets" />
+      <Header Logo={logo} Profile={perfito}/>
       <div className="container d-flex align-items-start mb-5 ps-4 pb-5"></div>
-
+      <Perfil Profile={perfito} />
       <div className="d-flex ms-4 me-4 row">
         <div className="conteudo rounded-3 col-12 col-md-6 container-md alinha">
           <h1 className="fw-bold pt-3">Favorite Games</h1>
@@ -34,6 +39,7 @@ const Profile = (props) => {
           <AllGames Banner={rdr2} />
         </div>
       </div>
+      <Footer Logo={logo}/>
     </div>
   );
 };

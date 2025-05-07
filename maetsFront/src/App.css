@@ -9,6 +9,10 @@ body {
   color: #fff !important;
 }
 
+.inputCredit {
+  background: #3b3b3b !important;
+  min-height: 45px;
+}
 .conteudo {
   background-color: #252525 !important;
 }
@@ -103,16 +107,17 @@ img.responsiva {
   border-radius: 4px;
 }
 
-.conteudo {
-  background-color: #252525 !important;
-}
-
-.inputTamanho {
-  min-width: 347px;
-}
-
 .btnCor {
   background: #401be4 !important;
+}
+
+.inputCredit {
+  background: #3b3b3b !important;
+  min-height: 45px;
+}
+
+.inputCredit::placeholder {
+  color: #7f7f7f !important;
 }
 
 .Login {
@@ -159,9 +164,8 @@ img.responsiva {
   background-color: #202127 !important;
   max-width: 996px;
 }
-.FundoForm{
+.FundoForm {
   background-color: #202127 !important;
-
 }
 
 .Fts img {
@@ -173,39 +177,67 @@ img.responsiva {
   max-width: 99%;
 }
 
+.games {
+  width: 250px;
+  height: 400px;
+  margin: 1.5rem;
+  position: relative;
+  overflow: hidden;
+  border: none;
+  box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
 .BtnTamanho {
   font-size: 1rem;
 }
-.Juntinhos input{ 
+.Juntinhos input {
   width: 160px;
   height: 29.56px;
 }
 .inputCredit {
-  background: #3B3B3B !important;
+  background: #3b3b3b !important;
   min-height: 45px;
-
 }
-
 
 .inputCredit::placeholder {
-  color: #7F7F7F !important;
+  color: #7f7f7f !important;
+}
+
+.generoTabela {
+  color: #7c7c7c !important;
+}
+.games div:nth-of-type(1) {
+  position: absolute;
+  text-align: center;
+  padding: 16px;
+  width: 100%;
+  opacity: 0;
+  top: 0;
+  color: #000000;
+}
+
+.games:hover {
+  box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.4);
+  transform: scale(1.05, 1.05);
 }
 
 .generoTabela {
   color: #7c7c7c !important;
 }
 
-.generoTabela :hover {
-  color: #ffffff !important;
-  transition: color 0.3s ease-in-out;
+.games div:nth-of-type(2) img {
+  height: 100%;
+  width: 100%;
 }
 
-
-.generoTabela {
-  color: #7c7c7c !important;
+.games div:nth-of-type(3) h3 {
+  margin-top: 5px;
+  color: #f9d3b4;
 }
 
-.generoTabela :hover {
-  color: #ffffff !important;
-  transition: color 0.3s ease-in-out;
+.games:hover div:nth-of-type(1) {
+  opacity: 1;
 }

@@ -1,4 +1,5 @@
 import React from "react";
+import Logo from "../assets/Logo.png"
 
 const Login = (props) => {
   return (
@@ -6,7 +7,7 @@ const Login = (props) => {
       <div className="Centro d-flex justify-content-center align-items-center ">
         <div className="Login d-flex flex-column align-items-center rounded-3 justify-content-center">
           <div className="container d-flex justify-content-between mt-2 p-5 pb-4 pt-4 ">
-            <img src={props.logo} alt="" />
+            <img src={Logo} alt="" />
             <p>x</p>
           </div>
           <div className="labelo d-flex flex-column w-100 p-5 pt-0 pb-4 ">
