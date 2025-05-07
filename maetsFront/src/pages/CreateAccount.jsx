@@ -129,10 +129,13 @@ const CreateAccount = () => {
             </div>
             <div className="form-check mt-2 align-items-center">
               <input
-                className="cheks form-check-input border-0"
+                className="cheks  form-check-input border-0"
                 type="checkbox"
               />
-              <label htmlFor="" className="Remember form-check-label fs-6">
+              <label
+                htmlFor=""
+                className="Remember form-check-label fs-6"
+              >
                 Remember me
               </label>
             </div>
@@ -148,7 +151,7 @@ const CreateAccount = () => {
               <ins> Help, I can´t create account </ins>
             </p>
             <Link to="/login">
-              <p role="button">
+              <p role="button" className="footinho">
                 <ins>You have a MAETS account? Log in your Account</ins>
               </p>
             </Link>
