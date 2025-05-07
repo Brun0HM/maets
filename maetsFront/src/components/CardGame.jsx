@@ -6,7 +6,7 @@ const CardGame = () => {
         <div>
             <p>Title</p>
         </div>
-      <img src="https://placehold.co/310x460" alt="" />
+      <img src="https://placehold.co/250x400" alt="" />
     </div>
   );
 };

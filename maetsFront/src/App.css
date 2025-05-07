@@ -158,8 +158,8 @@ img.responsiva {
   font-size: 15px !important;
 }
 .games {
-  width: 310px;
-  height: 460px;
+  width: 250px;
+  height: 400px;
   margin: 1.5rem;
   position: relative;
   overflow: hidden;
@@ -199,3 +199,4 @@ img.responsiva {
 .games:hover div:nth-of-type(1) {
   opacity: 1;
 }
+
