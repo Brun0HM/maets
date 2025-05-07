@@ -1,7 +1,18 @@
 import React from "react";
+import { useState, useEffect } from "react";
 import "../app.css";
 import { Link } from "react-router";
 const Header = (props) => {
+    const [username, setUsername] = useState('');
+  
+    useEffect(() => {
+      // Recupera os dados do localStorage quando o componente for montado
+      const storedData = JSON.parse(localStorage.getItem('devlogin'));
+      if (storedData && storedData.username) {
+        setUsername(storedData.username);
+      }
+    }, []);
+
   return (
     <nav className="navbar navbar-expand-lg px-4">
       <div className="container-fluid">
@@ -45,7 +56,7 @@ const Header = (props) => {
             <div className="d-flex align-items-center justify-content-between gap-2">
               {/* Nome e botão de perfil */}
               <div className="text-end">
-                <h1 className="text-light fw-bold mb-0 fs-5">Leon Martins</h1>
+                <h1 className="text-light fw-bold mb-0 fs-5"> Welcome, {username || 'Guest'}! </h1>
                 <Link to="/profile" className="text-decoration-none text-light">
                   <i className="bi bi-chevron-down me-1 text-light"></i> See
                   Profile
