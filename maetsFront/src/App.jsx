@@ -15,11 +15,12 @@ import TablesAdmin from "./components/TablesAdmin";
 import FormCupom from "./components/FormCupom";
 import FormGames from "./components/FormGames";
 import FormCate from "./components/FormCate";
+import EditProfile from "./pages/EditProfile";
 
 const App = () => {
   return (
     <div>
-      <Payment />
+      <EditProfile />
     </div>
 
   );
