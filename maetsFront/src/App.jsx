@@ -17,7 +17,6 @@ import FormGames from "./components/FormGames";
 import FormCate from "./components/FormCate";
 import EditProfile from "./pages/EditProfile";
 import PurchaseSummary from "./components/PurchaseSummary";
-import PayCard from "./components/PayCard";
 
 const App = () => {
   const game = [
@@ -75,7 +74,6 @@ const App = () => {
 
   return (
     <div>
-      <EditProfile />
       
     </div>
   );

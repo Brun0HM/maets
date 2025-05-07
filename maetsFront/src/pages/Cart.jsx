@@ -2,7 +2,6 @@ import React from "react";
 import cyberpunk from "../assets/Banner.png";
 import ItemsCart from "../components/ItensCart";
 import PurchaseSummary from "../components/PurchaseSummary";
-import Sumary from "../components/Sumary";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import logo from "../assets/Logo.png";
