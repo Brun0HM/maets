@@ -5,6 +5,7 @@ import Header from "../components/Header";
 import fotinha from "../assets/fotinha.png";
 import CardGame from "../components/CardGame";
 
+
 const Home = (props) => {
   return (
     <div>

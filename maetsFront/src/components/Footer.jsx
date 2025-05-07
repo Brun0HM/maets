@@ -11,7 +11,9 @@ const Footer = (props) => {
             <i className="bi bi-github"></i>
             <a
               className="text-decoration-none text-white fw-medium"
-              href="github.com"
+              href="https://github.com/Brun0HM"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Brun0HM
             </a>
@@ -20,18 +22,22 @@ const Footer = (props) => {
             <i className="bi bi-github"></i>
             <a
               className="text-decoration-none text-white fw-medium"
-              href="github.com"
+              href="https://github.com/rattin1"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              Brun0HM
+              rattin1
             </a>
           </div>
           <div className="d-flex justify-content-end align-items-center gap-1">
             <i className="bi bi-github"></i>
             <a
               className="text-decoration-none text-white fw-medium"
-              href="github.com"
+              href="https://github.com/ThiagoM22"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              Brun0HM
+              ThiagoM22
             </a>
           </div>
         </div>
