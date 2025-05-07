@@ -2,8 +2,6 @@
 import React, { useState } from 'react';
 
 export default function PurchaseSummary() {
-// Receives `cartItems` as props:
-const PurchaseSummary = ({ cartItems = [] }) => {
   const [coupon, setCoupon] = useState('');
   const cartItems = [
     { name: 'Product A', price: 49.99 },
@@ -13,13 +11,12 @@ const PurchaseSummary = ({ cartItems = [] }) => {
   const total = cartItems.reduce((acc, item) => acc + item.price, 0);
 
   const handleCheckout = () => {
-    console.log('Checkout started', { cartItems, coupon });
+    console.log('Checkout iniciado', { cartItems, coupon });
   };
 
   return (
     <div className="col-12 col-md-4">
       <div className="conteudo text-light border-0 rounded-4 p-4">
-      <div className="content border-0 rounded-4 p-4">
         <h5 className="fw-bold mb-3">Purchase Summary</h5>
         {cartItems.map((item, idx) => (
           <div key={idx} className="d-flex justify-content-between mb-2">
@@ -28,11 +25,6 @@ const PurchaseSummary = ({ cartItems = [] }) => {
           </div>
         ))}
         <hr className="border-light" />
-
-        <hr />
-        </div>
-        <div className="d-flex justify-content-between fw-bold mb-3">
-
         <div className="d-flex justify-content-between fw-bold mb-3">
           <span>Total:</span>
           <span>$ {total.toFixed(2)}</span>
