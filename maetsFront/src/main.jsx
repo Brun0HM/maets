@@ -12,6 +12,7 @@ import DashBoard from "./pages/DashBoard.jsx";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
+import CreateAccount from "./pages/CreateAccount.jsx";
 import EditProfile from "./pages/EditProfile.jsx";
 
 createRoot(document.getElementById("root")).render(
@@ -24,6 +25,8 @@ createRoot(document.getElementById("root")).render(
         <Route path="/profile" element={<Profile />} />
         <Route path="/payment" element={<Payment />} />
         <Route path="/dashboard" element={<DashBoard />} />
+        <Route path="/createaccount" element={<CreateAccount />} />
+
         <Route path="/editprofile" element={<EditProfile />} />
         
       </Routes>

@@ -1,18 +1,26 @@
 import { useState } from "react";
 import Modal from "./Modal";
 
-const CardGame = () => {
+const CardGame = (props) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const toggleModal = () => setIsModalOpen(!isModalOpen);
   return (
     <>
-    <div className="games" onClick={toggleModal}>
-      <div>
-        <p>Title</p>
+      <div className="games" onClick={toggleModal}>
+        <div>
+          <p>{props.title}</p>
+        </div>
+        <img src={props.imagem} alt="" />
       </div>
-      <img src="https://placehold.co/250x350" alt="" />
-    </div>
-    {isModalOpen && <Modal click={toggleModal}/>}
+      {isModalOpen && (
+        <Modal
+          click={toggleModal}
+          title={props.title}
+          descricao={props.descricao}
+          banner={props.banner}
+          genero={props.genero}
+        />
+      )}
     </>
   );
 };
