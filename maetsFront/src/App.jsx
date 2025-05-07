@@ -74,9 +74,7 @@ const App = () => {
 
   return (
     <div>
-      <Header Logo={logo} Profile={perfito} />
-      <Home />
-      <Footer Logo={logo} />
+      
     </div>
   );
 };
