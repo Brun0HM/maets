@@ -1,36 +1,34 @@
-// **components/PurchaseSummary.jsx**
+// components/PurchaseSummary.jsx
 import React, { useState } from 'react';
 
-// Receives `cartItems` as props:
-const PurchaseSummary = ({ cartItems = [] }) => {
+export default function PurchaseSummary() {
   const [coupon, setCoupon] = useState('');
+  const cartItems = [
+    { name: 'Product A', price: 49.99 },
+    { name: 'Product B', price: 29.99 },
+    { name: 'Product C', price: 19.99 },
+  ];
   const total = cartItems.reduce((acc, item) => acc + item.price, 0);
 
   const handleCheckout = () => {
-    console.log('Checkout started', { cartItems, coupon });
+    console.log('Checkout iniciado', { cartItems, coupon });
   };
 
   return (
     <div className="col-12 col-md-4">
-      <div className="content border-0 rounded-4 p-4">
+      <div className="conteudo text-light border-0 rounded-4 p-4">
         <h5 className="fw-bold mb-3">Purchase Summary</h5>
-
         {cartItems.map((item, idx) => (
           <div key={idx} className="d-flex justify-content-between mb-2">
             <span>{item.name}</span>
-            <span>R$ {item.price.toFixed(2)}</span>
+            <span>$ {item.price.toFixed(2)}</span>
           </div>
         ))}
-
-        <hr />
-        </div>
-        <div className="d-flex justify-content-between fw-bold mb-3">
-
+        <hr className="border-light" />
         <div className="d-flex justify-content-between fw-bold mb-3">
           <span>Total:</span>
-          <span>R$ {total.toFixed(2)}</span>
+          <span>$ {total.toFixed(2)}</span>
         </div>
-
         <input
           className="form-control mb-3 inputCredit border-0 text-light"
           type="text"
@@ -38,7 +36,6 @@ const PurchaseSummary = ({ cartItems = [] }) => {
           value={coupon}
           onChange={(e) => setCoupon(e.target.value)}
         />
-
         <button
           className="btnCor border-0 text-light p-2 rounded-3 w-100 fw-bold"
           onClick={handleCheckout}
@@ -48,8 +45,4 @@ const PurchaseSummary = ({ cartItems = [] }) => {
       </div>
     </div>
   );
-};
-
-export default PurchaseSummary;
-
-
+}
