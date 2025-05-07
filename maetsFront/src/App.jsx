@@ -73,11 +73,7 @@ const App = () => {
   <Header/>
   <Home game={game}/>
   </>;
-  return (
-    <div>
-      
-    </div>
-  );
+
 };
 
 export default App;
