@@ -2,73 +2,90 @@ import React, { useState, useEffect } from "react";
 import RegisteredCards from "../components/RegisteredCards";
 import RegisterCard from "../components/RegisterCard";
 import PurchaseSummary from "../components/PurchaseSummary";
+import { useNavigate } from "react-router";
 
-export default function Payment() {
-  const [cards, setCards] = useState([]); // Estado para armazenar os cartões
-  const [selectedCard, setSelectedCard] = useState(null); // Estado para o cartão selecionado
-  const [error, setError] = useState(""); // Estado para mensagens de erro
+const Payment = () => {
+  const [cards, setCards] = useState([]); // State to store registered cards
+  const [selectedCard, setSelectedCard] = useState(null);
+  const [error, setError] = useState("");
+  const [cartItems, setCartItems] = useState([]); // State to store cart items
+  const navigate = useNavigate(); // Hook for navigation
 
-  // Carrega os cartões do localStorage ao inicializar
   useEffect(() => {
-    const savedCards = JSON.parse(localStorage.getItem("cards")) || [];
-    setCards(savedCards);
+    // Retrieve cart items from LocalStorage when the page loads
+    const storedCart = JSON.parse(localStorage.getItem("cart")) || [];
+    setCartItems(storedCart);
+
+    // Retrieve registered cards from LocalStorage
+    const storedCards = JSON.parse(localStorage.getItem("cards")) || [];
+    setCards(storedCards);
   }, []);
 
-  const handleCheckout = () => {
-    // Verifica se há um cartão selecionado
-    if (!selectedCard) {
-      setError("Please select a valid payment method before proceeding.");
-      return false; // Impede a navegação
-    }
+  const handleAddCard = (newCard) => {
+    // Add the new card to the state
+    const updatedCards = [...cards, newCard];
+    setCards(updatedCards);
 
-    // Limpa o erro e continua
-    setError("");
-    console.log("Checkout successful with card:", selectedCard);
-    return true; // Indica que a validação foi bem-sucedida
+    // Save the updated cards to LocalStorage
+    localStorage.setItem("cards", JSON.stringify(updatedCards));
   };
 
-  const cartItems = [
-    { name: "Cyberpunk", price: 48.99 },
-    { name: "Cyberpunk DLC", price: 29.99 },
-    { name: "Cyberpunk 200 Coins", price: 9.99 },
-  ];
+  const handleCheckout = () => {
+    // Check if a payment method is selected
+    if (!selectedCard) {
+      setError("Please select a payment method before proceeding.");
+      return false; // Prevent navigation
+    }
+
+    // Clear the error and proceed
+    setError("");
+    console.log("Checkout successful with card:", selectedCard);
+
+    // Clear the cart from LocalStorage
+    localStorage.removeItem("cart");
+
+    // Redirect to the profile page
+    navigate("/profile");
+    return true; // Indicates that the validation was successful
+  };
 
   return (
     <div className="container my-5">
       <div className="gy-4 justify-content-center">
         <div className="row">
-          {/* Cartões Registrados */}
+          {/* Registered Cards */}
           <div className="col-12 col-md-3 mt-3">
             <RegisteredCards
               cards={cards}
-              setCards={setCards}
               setSelectedCard={setSelectedCard}
             />
           </div>
 
-          {/* Formulário para Registrar Novo Cartão */}
+          {/* Register Card */}
           <div className="col-12 col-md-5 mt-3">
             <RegisterCard
               setHasPaymentMethod={(isValid) => {
-                if (isValid) setError(""); // Limpa o erro se o cartão for válido
+                if (isValid) setError(""); // Clears the error if the card is valid
               }}
-              updateCards={setCards} // Atualiza os cartões dinamicamente
+              updateCards={handleAddCard} // Dynamically updates the cards
             />
           </div>
 
-          {/* Resumo da Compra */}
+          {/* Purchase Summary */}
           <div className="col-12 col-md-4 mt-3">
             <PurchaseSummary
-              cartItems={cartItems}
+              cartItems={cartItems} // Passes the cart items from LocalStorage
               redirectTo="/profile"
               btn={"Checkout"}
-              handleCheckout={handleCheckout} // Passa a função de validação para o botão
+              handleCheckout={handleCheckout} // Passes the validation function to the button
             />
             {error && <p className="text-danger mt-3">{error}</p>}{" "}
-            {/* Exibe a mensagem de erro */}
+            {/* Displays the error message */}
           </div>
         </div>
       </div>
     </div>
   );
-}
+};
+
+export default Payment;
