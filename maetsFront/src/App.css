@@ -178,7 +178,7 @@ img.responsiva {
 }
 
 .games {
-  max-width:250px ;
+  max-width: 250px;
   max-height: 350px;
 
   min-width: 250px;
@@ -264,4 +264,11 @@ img.responsiva {
   background: rgba(0, 0, 0, 0.4);
   z-index: 999;
   animation: fadeIn 0.3s ease-in-out forwards;
+}
+
+.quadrado {
+  width: 30px;
+  height: 30px;
+  padding-left: 3px;
+  padding-top: 1px;
 }
