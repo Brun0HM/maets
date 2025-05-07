@@ -1,16 +1,23 @@
-// components/RegisteredCards.jsx
-import React, { useState } from 'react';
+import React from "react";
 
-export default function RegisteredCards() {
-  const [cards, setCards] = useState([]);
-  const [selectedIndex, setSelectedIndex] = useState(null);
+export default function RegisteredCards({ cards, setCards, setSelectedCard }) {
+  const [selectedIndex, setSelectedIndex] = React.useState(null);
 
-  const maskCardNumber = (num) => '**** **** **** ' + num.slice(-4);
+  const maskCardNumber = (num) => "**** **** **** " + num.slice(-4);
 
-  const handleSelect = (i) => setSelectedIndex(i);
+  const handleSelect = (i) => {
+    setSelectedIndex(i);
+    setSelectedCard(cards[i]); // Define o cartão selecionado no componente pai
+  };
+
   const handleDelete = (i) => {
-    setCards(cards.filter((_, idx) => idx !== i));
-    if (selectedIndex === i) setSelectedIndex(null);
+    const updatedCards = cards.filter((_, idx) => idx !== i);
+    setCards(updatedCards);
+    localStorage.setItem("cards", JSON.stringify(updatedCards)); // Atualiza o localStorage
+    if (selectedIndex === i) {
+      setSelectedIndex(null);
+      setSelectedCard(null); // Remove o cartão selecionado se ele for excluído
+    }
   };
 
   return (
@@ -25,16 +32,16 @@ export default function RegisteredCards() {
               key={i}
               onClick={() => handleSelect(i)}
               className={`p-3 mb-3 rounded-3 d-flex justify-content-between align-items-center ${
-                i === selectedIndex ? 'border border-success' : ''
+                i === selectedIndex ? "border border-success" : ""
               }`}
-              style={{ cursor: 'pointer' }}
+              style={{ cursor: "pointer" }}
             >
               <div>
                 <p className="mb-1 fw-bold">{card.fullName}</p>
                 <p className="mb-0">{maskCardNumber(card.cardNumber)}</p>
               </div>
               <button
-                className="btn btn-sm btn-danger"
+                className="btn btn-sm btn-outline-danger"
                 onClick={(e) => {
                   e.stopPropagation();
                   handleDelete(i);
@@ -49,4 +56,3 @@ export default function RegisteredCards() {
     </div>
   );
 }
-

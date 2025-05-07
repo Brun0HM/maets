@@ -6,16 +6,16 @@ const ItensCart = (props) => {
       <div className="favGamesFundo rounded-3 p-3 d-flex flex-column flex-md-row justify-content-between align-items-start">
         {/* Imagem e informações */}
         <div className="d-flex">
-          <img className="rounded me-3" src={props.Banner} alt={props.titulo} />
+          <img className="rounded me-3" src={props.Banner} alt={props.title} />
           <div>
-            <h1 className="fw-semibold fs-4 mb-1">{props.titulo}</h1>
-            <span className="genero">{props.genero}</span>
+            <h1 className="fw-semibold fs-4 mb-1">{props.title}</h1>
+            <span className="genero">{props.genre}</span>
           </div>
         </div>
-        
+
         {/* Preço e lixeira */}
         <div className="d-flex flex-column align-items-lg-end  mt-3 mt-md-0">
-          <h4 className="fs-5 mb-2">${props.preco}</h4>
+          <h4 className="fs-5 mb-2">${props.price}</h4>
           <i className="bi bi-trash fs-5 genero" role="button"></i>
         </div>
       </div>

@@ -14,6 +14,7 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import CreateAccount from "./pages/CreateAccount.jsx";
 import EditProfile from "./pages/EditProfile.jsx";
+import EditProfile from "./pages/EditProfile.jsx";
 
 createRoot(document.getElementById("root")).render(
   <React.StrictMode>

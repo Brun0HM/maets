@@ -12,7 +12,7 @@ import Header from "../components/Header";
 import logo from "../assets/Logo.png";
 import perfito from "../assets/profile.png";
 
-const Profile = (props) => {
+const Profile = () => {
   return (
     <div>
       <Header Logo={logo} Profile={perfito}/>
