@@ -12,14 +12,11 @@ const ItensCart = (props) => {
             <span className="genero">{props.genero}</span>
           </div>
         </div>
-
+        
         {/* Preço e lixeira */}
         <div className="d-flex flex-column align-items-lg-end  mt-3 mt-md-0">
           <h4 className="fs-5 mb-2">${props.preco}</h4>
-          <i
-            className="bi bi-trash fs-5 genero"
-            role="button"
-          ></i>
+          <i className="bi bi-trash fs-5 genero" role="button"></i>
         </div>
       </div>
     </div>
