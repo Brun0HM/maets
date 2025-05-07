@@ -2,15 +2,15 @@ import React from "react";
 import "../app.css";
 import { Link } from "react-router";
 const Header = (props) => {
-
   return (
     <nav className="navbar navbar-expand-lg px-4">
       <div className="container-fluid">
         {/* Logo */}
-        <Link to="/" className="text-decoration-none">
-        <a className="navbar-brand d-flex align-items-center pe-4" href="#">
+        <Link
+          to="/"
+          className="navbar-brand d-flex align-items-center pe-4 text-decoration-none"
+        >
           <img src={props.Logo} alt="Logo" height="40" />
-        </a>
         </Link>
 
         {/* Botão de colapso para dispositivos menores */}
@@ -46,8 +46,9 @@ const Header = (props) => {
               {/* Nome e botão de perfil */}
               <div className="text-end">
                 <h1 className="text-light fw-bold mb-0 fs-5">Leon Martins</h1>
-                <Link to="/profile"   className="text-decoration-none text-light">
-                <i className="bi bi-chevron-down me-1 text-light"></i> See Profile
+                <Link to="/profile" className="text-decoration-none text-light">
+                  <i className="bi bi-chevron-down me-1 text-light"></i> See
+                  Profile
                 </Link>
               </div>
 
@@ -62,14 +63,14 @@ const Header = (props) => {
             </div>
 
             {/* Ícone do Carrinho */}
-            <Link to="/cart"  role="button" className="text-decoration-none">
-            <div className="row d-flex align-items-center justify-content-start">
-              <i
-                className="bi bi-cart3 text-light fs-4 btn d-flex align-items-center justify-content-center col-4 col-md-12 conteudo p-md-3"
-                width="60px"
-                height="60px"
-              ></i>
-            </div>
+            <Link to="/cart" role="button" className="text-decoration-none">
+              <div className="row d-flex align-items-center justify-content-start">
+                <i
+                  className="bi bi-cart3 text-light fs-4 btn d-flex align-items-center justify-content-center col-4 col-md-12 conteudo p-md-3"
+                  width="60px"
+                  height="60px"
+                ></i>
+              </div>
             </Link>
           </div>
         </div>
