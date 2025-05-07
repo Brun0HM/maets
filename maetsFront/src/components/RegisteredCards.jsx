@@ -14,7 +14,7 @@ export default function RegisteredCards() {
   };
 
   return (
-    <div className="col-12 col-md-4">
+    <div className="">
       <div className="conteudo text-light border-0 rounded-4 pt-4 pb-4">
         <h5 className="text-center mb-3">Registered Cards</h5>
         {cards.length === 0 ? (
