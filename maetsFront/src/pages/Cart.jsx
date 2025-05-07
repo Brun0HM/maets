@@ -1,5 +1,4 @@
 import React from "react";
-import React from "react";
 import Summary from "../components/Summary";
 import cyberpunk from "../assets/Banner.png";
 import ItemsCart from "../components/ItemsCart";
