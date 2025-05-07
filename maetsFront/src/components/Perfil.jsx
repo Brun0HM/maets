@@ -14,7 +14,7 @@ const Perfil = (props) => {
             <i className="bi bi-caret-right-fill"></i>
           </div>
           <div className="text-dark d-flex align-items-center rounded-4 tamanho mb-2 level gap-2">
-            <span className="m-2 border border-2 border-black rounded-circle">
+            <span className="m-2 border border-2 border-black rounded-circle quadrado">
               35
             </span>
             <span className="">Colector</span>
