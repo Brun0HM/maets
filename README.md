@@ -6,7 +6,6 @@
 
 **Maets** é uma plataforma digital inspirada na Steam, criada como projeto full stack para fins de aprendizado e portfólio. Com um visual moderno e recursos funcionais, simula um ambiente real de compra e gerenciamento de jogos.
 
----
 
 ## ✨ Funcionalidades
 
@@ -17,7 +16,6 @@
 - 🎮 Área do usuário com jogos adquiridos
 - 📦 Painel de administrador (em desenvolvimento)
 
----
 
 ## 🧰 Tecnologias Utilizadas
 
@@ -27,7 +25,7 @@
 - Vite
 - CSS
 - Bootstrap
-- React Router DOM
+- React Router
 
 ### ⚙️ Backend
 
@@ -35,13 +33,49 @@
 - .NET
 - ASP.NET Web API
 
----
 
-## 📦 Como rodar o projeto localmente
+## 🔧 Clonando o repositório
 
-### 1. Clone o repositório
 
 ```bash
-git clone https://github.com/seu-usuario/maets.git
+git clone https://github.com/Brun0HM/maets.git
 cd maets
 ```
+
+## 💻 Rodando o projeto localmente
+### FrontEnd
+acesse a pasta do frontend:
+``` bash
+cd maetsFront
+```
+
+Instale as dependências:
+``` bash
+npm install
+```
+
+Rode o projeto:
+``` bash
+npm run dev
+```
+
+### BackEnd
+acesse a pasta do backend:
+``` bash
+cd maetsApi
+```
+
+Restaure os pacotes:
+``` bash
+dotnet restore
+```
+
+Rode o projeto:
+``` bash
+dotnet run
+```
+
+## 🧑‍💻 Autores 
+- [Bruno](https://github.com/Brun0Hm)
+- [Mazzi](https://github.com/ThiagoM22)
+- [Ryan](https://github.com/rattin1)
