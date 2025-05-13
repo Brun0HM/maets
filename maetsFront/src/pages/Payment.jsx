@@ -34,7 +34,6 @@ const Payment = () => {
     // Check if a payment method is selected
     if (!selectedCard) {
       setError("Please select a payment method before proceeding.");
-      return false; // Prevent navigation
     }
 
     // Clear the error and proceed
@@ -46,7 +45,6 @@ const Payment = () => {
 
     // Redirect to the profile page
     navigate("/profile");
-    return true; // Indicates that the validation was successful
   };
 
   return (
@@ -57,6 +55,7 @@ const Payment = () => {
           <div className="col-12 col-md-3 mt-3">
             <RegisteredCards
               cards={cards}
+              setCards={setCards}
               setSelectedCard={setSelectedCard}
             />
           </div>
@@ -65,22 +64,22 @@ const Payment = () => {
           <div className="col-12 col-md-5 mt-3">
             <RegisterCard
               setHasPaymentMethod={(isValid) => {
-                if (isValid) setError(""); // Clears the error if the card is valid
+                if (isValid) setError(""); // Clear the error if the card is valid
               }}
-              updateCards={handleAddCard} // Dynamically updates the cards
+              updateCards={setCards} // Dynamically update the cards
             />
           </div>
 
           {/* Purchase Summary */}
           <div className="col-12 col-md-4 mt-3">
             <PurchaseSummary
-              cartItems={cartItems} // Passes the cart items from LocalStorage
+              cartItems={cartItems}
               redirectTo="/profile"
               btn={"Checkout"}
-              handleCheckout={handleCheckout} // Passes the validation function to the button
+              handleCheckout={handleCheckout} // Pass the validation function to the button
             />
             {error && <p className="text-danger mt-3">{error}</p>}{" "}
-            {/* Displays the error message */}
+            {/* Display the error message */}
           </div>
         </div>
       </div>

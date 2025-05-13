@@ -45,7 +45,12 @@ export default function RegisterCard({ setHasPaymentMethod, updateCards }) {
 
   const handleSaveCard = () => {
     if (validate()) {
-      const newCard = { fullName, cardNumber, expiry, cvv };
+      const newCard = {
+        fullName: fullName.trim(),
+        cardNumber: cardNumber.trim(),
+        expiry: expiry.trim(),
+        cvv: cvv.trim(),
+      };
 
       // Salva o cartão no localStorage
       const savedCards = JSON.parse(localStorage.getItem("cards")) || [];

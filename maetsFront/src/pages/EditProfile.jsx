@@ -1,5 +1,4 @@
 import React from 'react'
-import perfito from "../assets/Profile.png"
 import ChangeInfoUser from '../components/ChangeInfoUser'
 import Header from '../components/Header'
 import Footer from '../components/Footer'

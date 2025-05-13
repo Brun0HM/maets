@@ -1,6 +1,19 @@
 import React from "react";
-export default function RegisteredCards({ cards, setCards, setSelectedCard }) {
+
+export default function RegisteredCards({
+  cards,
+  setCards,
+  setSelectedCard,
+}) {
   const [selectedIndex, setSelectedIndex] = React.useState(null);
+
+  const maskCardNumber = (cardNumber) => {
+    // Verifica se cardNumber é válido antes de aplicar o slice
+    if (!cardNumber || typeof cardNumber !== "string") {
+      return "Invalid Card Number";
+    }
+    return "**** **** **** " + cardNumber.slice(-4);
+  };
 
   const handleSelect = (i) => {
     setSelectedIndex(i);
@@ -34,8 +47,8 @@ export default function RegisteredCards({ cards, setCards, setSelectedCard }) {
               style={{ cursor: "pointer" }}
             >
               <div>
-                <p className="mb-1 fw-bold">{card.fullName}</p>
-                <p className="mb-0">{card.cardNumber}</p>
+                <p className="mb-1 fw-bold">{card.fullName || "No Name"}</p>
+                <p className="mb-0">{maskCardNumber(card.cardNumber)}</p>
               </div>
               <button
                 className="btn btn-sm btn-outline-danger"

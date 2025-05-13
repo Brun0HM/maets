@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router";
 import "../App.css";
 import Perfil from "../components/Perfil";
 import FavGames from "../components/FavGames";
