@@ -3,7 +3,7 @@ import React from "react";
 export default function RegisteredCards({ cards, setCards, setSelectedCard }) {
   const [selectedIndex, setSelectedIndex] = React.useState(null);
 
-  const maskCardNumber = (num) => "**** **** **** " + num.slice(-4);
+  const maskCardNumber = (number) => "**** **** **** " + number.slice(-4);
 
   const handleSelect = (i) => {
     setSelectedIndex(i);
