@@ -1,9 +1,6 @@
 import React from "react";
-
 export default function RegisteredCards({ cards, setCards, setSelectedCard }) {
   const [selectedIndex, setSelectedIndex] = React.useState(null);
-
-  const maskCardNumber = (num) => "**** **** **** " + num.slice(-4);
 
   const handleSelect = (i) => {
     setSelectedIndex(i);
@@ -19,6 +16,7 @@ export default function RegisteredCards({ cards, setCards, setSelectedCard }) {
       setSelectedCard(null); // Remove o cartão selecionado se ele for excluído
     }
   };
+
   return (
     <div className="">
       <div className="conteudo text-light border-0 rounded-4 pt-4 pb-4">
@@ -37,7 +35,7 @@ export default function RegisteredCards({ cards, setCards, setSelectedCard }) {
             >
               <div>
                 <p className="mb-1 fw-bold">{card.fullName}</p>
-                <p className="mb-0">{maskCardNumber(card.cardNumber)}</p>
+                <p className="mb-0">{card.cardNumber}</p>
               </div>
               <button
                 className="btn btn-sm btn-outline-danger"

@@ -67,13 +67,13 @@ const App = () => {
       preco: 29.9,
     },
   ];
-  
 
-  return <>
-  <Header/>
-  <Home game={game}/>
-  </>;
-
+  return (
+    <>
+      <Header />
+      <Home game={game} />
+    </>
+  );
 };
 
 export default App;
