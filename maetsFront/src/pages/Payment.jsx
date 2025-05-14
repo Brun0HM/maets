@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
+import logo from "../assets/Logo.png";
 import RegisteredCards from "../components/RegisteredCards";
 import RegisterCard from "../components/RegisterCard";
 import PurchaseSummary from "../components/PurchaseSummary";
 import { useNavigate } from "react-router";
+import Header from "../components/Header";
 
 const Payment = () => {
   const [cards, setCards] = useState([]); // State to store registered cards
@@ -48,6 +50,8 @@ const Payment = () => {
   };
 
   return (
+    <div>
+      <Header Logo={logo} />
     <div className="container my-5">
       <div className="gy-4 justify-content-center">
         <div className="row">
@@ -77,13 +81,14 @@ const Payment = () => {
               redirectTo="/profile"
               btn={"Checkout"}
               handleCheckout={handleCheckout} // Pass the validation function to the button
-            />
+              />
             {error && <p className="text-danger mt-3">{error}</p>}{" "}
             {/* Display the error message */}
           </div>
         </div>
       </div>
     </div>
+              </div>
   );
 };
 
