@@ -1,5 +1,7 @@
 import React from "react";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
+import logo from "./assets/Logo.png";
 import "./App.css";
 import Home from "./pages/Home";
 
@@ -55,8 +57,9 @@ const App = () => {
 
   return (
     <>
-      <Header />
+      <Header Logo={logo} />
       <Home game={game} />
+      <Footer Logo={logo} />
     </>
   );
 };
