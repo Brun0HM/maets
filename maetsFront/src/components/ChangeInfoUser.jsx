@@ -87,6 +87,7 @@ const ChangeInfoUser = (props) => {
             className="border-0 rounded-3 inputCredit text-light p-3 flex-fill"
             placeholder="Name"
             type="text"
+            maxLength={20}
           />
           <input
             value={email}

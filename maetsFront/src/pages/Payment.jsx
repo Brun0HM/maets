@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import RegisteredCards from "../components/RegisteredCards";
 import RegisterCard from "../components/RegisterCard";
 import PurchaseSummary from "../components/PurchaseSummary";
+import Header from "../components/Header";
+import logo from "../assets/Logo.png";
 import { useNavigate } from "react-router";
 
 const Payment = () => {
@@ -48,6 +50,8 @@ const Payment = () => {
   };
 
   return (
+    <>
+      <Header Logo={logo} />
     <div className="container my-5">
       <div className="gy-4 justify-content-center">
         <div className="row">
@@ -84,6 +88,7 @@ const Payment = () => {
         </div>
       </div>
     </div>
+              </>
   );
 };
 

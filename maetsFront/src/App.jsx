@@ -2,6 +2,8 @@ import React from "react";
 import Header from "./components/Header";
 import "./App.css";
 import Home from "./pages/Home";
+import logo from "./assets/Logo.png";
+import Footer from "./components/Footer";
 
 
 const App = () => {
@@ -55,8 +57,9 @@ const App = () => {
 
   return (
     <>
-      <Header />
+      <Header Logo={logo} />
       <Home game={game} />
+      <Footer Logo={logo} />
     </>
   );
 };
