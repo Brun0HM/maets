@@ -1,5 +1,6 @@
 import React from 'react'
 import ChangeInfoUser from '../components/ChangeInfoUser'
+import logo from '../assets/Logo.png'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import logo from '../assets/Logo.png'
@@ -16,7 +17,7 @@ const EditProfile = () => {
       </div>
       
     </div>
-      <Footer />
+      <Footer Logo={logo} />
     </>
   )
 }
